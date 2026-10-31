@@ -7,14 +7,19 @@ const deg = d => (d * Math.PI) / 180;
 
 test("the camera in front sees the front view", () => assert.equal(viewFor(0), 4));
 test("the sides and the back", () => {
-  // checked against the goblin, which holds its club in its right hand: from the model's left (+x, angle +90
-  // degrees) the club is hidden behind the body, and so it is in the sprite the game names "right" (view 2)
-  assert.equal(viewFor(Math.PI / 2), 2);
-  assert.equal(viewFor(-Math.PI / 2), 6);
+  // the view number rises with the camera's turn round the creature, as the port's look scenario logs it (heading
+  // h shows view (h + 2) & 7 with the camera fixed); checked by eye on the goblin and the bat from +-45 and +-90
+  // degrees, where the model and the sprite then face the same way
+  assert.equal(viewFor(Math.PI / 2), 6);
+  assert.equal(viewFor(-Math.PI / 2), 2);
   assert.equal(viewFor(Math.PI), 0);
   assert.equal(viewFor(-Math.PI), 0);
 });
-test("halfway between two views is stable", () => assert.equal(viewFor(deg(22.5)), viewFor(deg(22.5) + 1e-9)));
+test("on a boundary the view rounds as the port's does", () => {
+  assert.equal(viewFor(deg(22.5)), 4);   // the front sector's edge, still the front
+  assert.equal(viewFor(deg(22.51)), 5);   // just past it
+  assert.equal(viewFor(deg(-33.75)), 3);   // the other edge: the port's truncation shifts the front half a step
+});
 test("idle and walking turn with the view", () => {
   assert.deepEqual(animFor("idle", 2), { name: "idle_right", frontOnly: false });
   assert.deepEqual(animFor("walking", 7), { name: "walking_rear_left", frontOnly: false });
@@ -26,10 +31,10 @@ test("attacks only from the front, else the standing view", () => {
   assert.deepEqual(animFor("idle_combat", 6), { name: "idle_left", frontOnly: true });
 });
 test("death from every side", () => assert.equal(animFor("death", 0).name, "death"));
-test("frames at eight a second, looping or holding", () => {
+test("frames at eight a second, every clip repeating as the model's do", () => {
   assert.equal(frameAt([5, 6, 7], "walking", 0.15), 6);   // the second eighth of a second
   assert.equal(frameAt([5, 6, 7], "walking", 0.4), 5);   // 3.2 frames in: the 3-frame loop is back at its start
-  assert.equal(frameAt([5, 6, 7], "attack_bash", 9), 7);   // held on the last frame
+  assert.equal(frameAt([5, 6, 7], "attack_bash", 0.4), 5);   // an attack repeats too, like the 3D model
   assert.equal(frameAt([5], "idle", 3), 5);
 });
 
@@ -37,17 +42,18 @@ test("frames at eight a second, looping or holding", () => {
 test("views follow the port's table", () => {
   assert.equal(viewFor(deg(22.5)), 4);   // the port still shows the front here
   assert.equal(viewFor(deg(-22.5)), 4);
-  assert.equal(viewFor(deg(35)), 3);   // past 33.75 degrees: the diagonal
-  assert.equal(viewFor(deg(-35)), 5);
-  assert.equal(viewFor(deg(60)), 3);   // the front-right diagonal runs from 33.75 to 67.5 degrees
-  assert.equal(viewFor(deg(70)), 2);   // then the side, for 56.25 degrees
-  assert.equal(viewFor(deg(135)), 1);
+  assert.equal(viewFor(deg(-35)), 3);   // past 33.75 degrees: the diagonal
+  assert.equal(viewFor(deg(35)), 5);
+  assert.equal(viewFor(deg(-60)), 3);   // the front-right diagonal runs from 33.75 to 67.5 degrees
+  assert.equal(viewFor(deg(-70)), 2);   // then the side, for 56.25 degrees
+  assert.equal(viewFor(deg(-135)), 1);
+  assert.equal(viewFor(deg(135)), 7);
 });
-test("time held on the last frame, so stepping back works at once", () => {
-  assert.equal(advance(0, 5, "attack_bash", 5), 4 / FPS);   // held, not left running on
-  assert.equal(advance(4 / FPS, -1 / FPS, "attack_bash", 5), 3 / FPS);
-  assert.equal(advance(0, -1 / FPS, "attack_bash", 5), 0);
-  assert.ok(Math.abs(advance(0, -1 / FPS, "walking", 4) - 3 / FPS) < 1e-9);   // a loop wraps back
+test("time wraps round the clip, so stepping works at once either way", () => {
+  assert.ok(Math.abs(advance(0, 5, "attack_bash", 5) - 0) < 1e-9);   // 40 frames on: round the 5-frame clip
+  assert.ok(Math.abs(advance(4 / FPS, -1 / FPS, "attack_bash", 5) - 3 / FPS) < 1e-9);
+  assert.ok(Math.abs(advance(0, -1 / FPS, "attack_bash", 5) - 4 / FPS) < 1e-9);   // back from the first frame
+  assert.ok(Math.abs(advance(0, -1 / FPS, "walking", 4) - 3 / FPS) < 1e-9);
   assert.ok(Math.abs(advance(3 / FPS, 2 / FPS, "walking", 4) - 1 / FPS) < 1e-9);
 });
 test("an animation the body lacks shows nothing, as the port", () => {

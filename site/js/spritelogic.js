@@ -7,15 +7,14 @@ export const VIEWS = ["rear", "rear_right", "right", "front_right", "front", "fr
 // the creature, 16 when the camera faces it. Front, back and sides take 5 steps, the diagonals 3.
 const TABLE = [0, 0, 0, 1, 1, 1, 2, 2, 2, 2, 2, 3, 3, 3, 4, 4, 4, 4, 4, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 0, 0];
 const STEP = Math.PI / 16;
-const LOOPS = new Set(["idle", "idle_combat", "walking"]);   // crittermodel.cs Loops: the others hold their last frame
 export const FPS = 8;   // one frame of a sequence each eighth of a second
 
 // The view seen from a camera at `angle` round the model: 0 in front of it (on its +z side, which the models
-// face), +90 degrees on its left (+x). The game's view numbers run the other way round: from the creature's left
-// it shows view 2, "right".
+// face), growing anticlockwise seen from above. The view number rises with the angle, as in the port: from +90
+// degrees it is 6, "left".
 export function viewFor(angle) {
   // the port truncates the camera's yaw to a step (>> 0xB) and subtracts it, which rounds the turn up
-  const step = Math.ceil(-angle / STEP - 1e-9);
+  const step = Math.ceil(angle / STEP - 1e-9);
   return TABLE[(((16 + step) % 32) + 32) % 32];
 }
 
@@ -30,19 +29,18 @@ export function animFor(clip, view) {
   return { name: `idle_${side}`, frontOnly: true };
 }
 
-// The frame shown `t` seconds into a clip whose frames are `frames`.
+// The frame shown `t` seconds into a clip whose frames are `frames`. Every clip repeats, as the 3D model's do on the
+// page, so an attack or a death can be watched again and again (in the game only idle, idle_combat and walking
+// repeat; the others play once).
 export function frameAt(frames, clip, t) {
-  const i = Math.floor(Math.max(t, 0) * FPS);
-  return frames[LOOPS.has(clip) ? i % frames.length : Math.min(i, frames.length - 1)];
+  return frames[Math.floor(Math.max(t, 0) * FPS) % frames.length];
 }
 
-// The clip's time after `dt` more seconds (negative to step back) for an animation of `length` frames: a looping
-// clip wraps round, any other is held between its first and last frame, so stepping back works at once.
+// The clip's time after `dt` more seconds (negative to step back) for an animation of `length` frames, wrapped
+// round the clip so that stepping works at once either way.
 export function advance(time, dt, clip, length) {
   const t = time + dt, end = length / FPS;
-  if (length <= 0) return 0;
-  if (LOOPS.has(clip)) return ((t % end) + end) % end;
-  return Math.min(Math.max(t, 0), (length - 1) / FPS);
+  return length <= 0 ? 0 : ((t % end) + end) % end;
 }
 
 // The frame to show: the cell index, or null when the body has no such animation (the game then draws nothing,
