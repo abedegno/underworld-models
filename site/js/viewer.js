@@ -134,6 +134,7 @@ async function loadSmooth() {
     smooth = gltf.scene;
     smooth.traverse(o => {
       if (o.isSkinnedMesh) o.frustumCulled = false;   // its bounds are those of the bind pose, not the clip's
+      if (o.isMesh && o.material.emissive) o.material.emissive.setRGB(0, 0, 0);   // a glow would wash the colours out to white
       if (o.isMesh && o.material.map) {
         o.material.map.magFilter = THREE.NearestFilter;   // keep the texture's pixels crisp, as the game's are
         o.material.metalness = 0;

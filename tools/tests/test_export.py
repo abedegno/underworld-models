@@ -75,3 +75,20 @@ def test_port_files_copied_byte_identical(repo):
     src, r = repo
     for p in src.iterdir():
         assert (r / "port/uw1" / p.name).read_bytes() == p.read_bytes()
+
+
+def test_editable_material_has_no_glow(tmp_path):
+    # two Meshy bodies came with emissiveFactor 1 and specular extensions: they showed plain white in the viewer
+    src, repo = make_repo(tmp_path)
+    p = src / "CR00.glb"
+    g = gltf.read(p)
+    g.json["materials"][0].update(emissiveFactor=[1, 1, 1], extensions={"KHR_materials_specular": {}, "KHR_materials_ior": {}})
+    g.json["extensionsUsed"] = ["KHR_materials_specular", "KHR_materials_ior"]
+    gltf.write(g, p)
+    export.run(None, src, repo, pal=PAL, aux_for=AUX.get, types=TYPES)
+    j = gltf.read(repo / "models/uw1/editable/CR00.glb").json
+    m = j["materials"][0]
+    assert "emissiveFactor" not in m and "emissiveTexture" not in m and "extensions" not in m
+    assert "extensionsUsed" not in j
+    assert m["pbrMetallicRoughness"]["baseColorTexture"] == {"index": 0}
+    assert (repo / "port/uw1/CR00.glb").read_bytes() == p.read_bytes()   # the port's own file is left as it is

@@ -41,6 +41,27 @@ def colour_word(rgb: np.ndarray) -> str:
     return max(counts, key=counts.get)
 
 
+MATERIAL_EXTENSIONS = ("KHR_materials_specular", "KHR_materials_ior", "KHR_materials_emissive_strength")
+
+
+def plain(glb):
+    """The glb with plain materials: base colour only. Two Meshy bodies came with full white emission and specular
+    extensions, which the port ignores but a viewer or Blender shows as a plain white model."""
+    for m in glb.json.get("materials", []):
+        for k in ("emissiveFactor", "emissiveTexture"):
+            m.pop(k, None)
+        for x in MATERIAL_EXTENSIONS:
+            m.get("extensions", {}).pop(x, None)
+        if m.get("extensions") == {}:
+            del m["extensions"]
+    for k in ("extensionsUsed", "extensionsRequired"):
+        if k in glb.json:
+            glb.json[k] = [x for x in glb.json[k] if x not in MATERIAL_EXTENSIONS]
+            if not glb.json[k]:
+                del glb.json[k]
+    return glb
+
+
 def sha1(path: Path) -> str:
     return hashlib.sha1(Path(path).read_bytes()).hexdigest()
 
@@ -124,7 +145,7 @@ def run(uw1, src_port, repo, pal=None, aux_for=None, types=None) -> list[str]:
             base = base_aux(body, types)
             g = gltf.read(glb)
             slots = gltf.texture(g)[..., 0]
-            gltf.write(gltf.with_texture(g, pal[aux[base][slots]]), editable / f"{mid}.glb")
+            gltf.write(plain(gltf.with_texture(g, pal[aux[base][slots]])), editable / f"{mid}.glb")
             colourings = creature_display(mid, entry["name"], model, slots, aux, base, types, pal, data, names)
             entry.update(kind="creature", master="smooth", colourings=colourings,
                          editable_sha1=sha1(editable / f"{mid}.glb"))
@@ -132,7 +153,7 @@ def run(uw1, src_port, repo, pal=None, aux_for=None, types=None) -> list[str]:
             entry.update(kind="item", master="smooth" if glb.exists() else "voxel", colourings=[])
             if glb.exists():
                 g = gltf.read(glb)
-                gltf.write(gltf.with_texture(g, pal[gltf.texture(g)[..., 0]]), editable / f"{mid}.glb")
+                gltf.write(plain(gltf.with_texture(g, pal[gltf.texture(g)[..., 0]])), editable / f"{mid}.glb")
                 entry["editable_sha1"] = sha1(editable / f"{mid}.glb")
             entry["voxel_sha1"] = item_display(mid, model, pal, voxels, data)
         manifest.append(entry)
