@@ -172,7 +172,10 @@ async function setColouring(i) {
   }
   const c = m.colourings[i];
   if (smooth && c) {
-    const tex = await new THREE.TextureLoader().loadAsync(c.texture);
+    const res = await fetch(c.texture);
+    if (!res.ok) throw new Error(`${c.texture}: ${res.status}`);
+    const tex = new THREE.Texture(await createImageBitmap(await res.blob(), { imageOrientation: "none" }));
+    tex.needsUpdate = true;
     tex.flipY = false;
     tex.colorSpace = THREE.SRGBColorSpace;
     tex.magFilter = THREE.NearestFilter;
