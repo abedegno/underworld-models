@@ -51,3 +51,13 @@ def test_ignores_git_and_venv(tmp_path):
     write(tmp_path, ".git/objects/x.dat")
     write(tmp_path, ".venv/lib/thing.dat")
     assert problems(tmp_path) == []
+
+
+def test_skips_what_git_ignores(tmp_path):
+    import subprocess
+    subprocess.run(["git", "init", "-q", str(tmp_path)], check=True)
+    (tmp_path / ".gitignore").write_text("env/\n")
+    write(tmp_path, "env/lib/data.dat")
+    write(tmp_path, "new/PALS.DAT")   # untracked but not ignored: could be committed, so flagged
+    found = problems(tmp_path)
+    assert len(found) == 1 and "PALS.DAT" in found[0]

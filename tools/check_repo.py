@@ -5,6 +5,7 @@ sprites, icons, strings). This guard runs in CI on every push and pull request.
 Usage: python tools/check_repo.py [root]
 """
 import fnmatch
+import subprocess
 import sys
 from pathlib import Path
 
@@ -16,10 +17,19 @@ SKIP = {".git", ".venv", "__pycache__", ".pytest_cache", "_site", ".superpowers"
 ICON_SIDE = 64
 
 
+def files(root: Path):
+    """Every file that is or could be committed: in a git repo, tracked and untracked files not ignored."""
+    if (root / ".git").exists():
+        r = subprocess.run(["git", "-C", str(root), "ls-files", "-co", "--exclude-standard", "-z"], capture_output=True)
+        if r.returncode == 0:
+            return sorted(root / f for f in r.stdout.decode().split("\0") if f)
+    return sorted(root.rglob("*"))   # not a git repo: every file, less the SKIP folders
+
+
 def problems(root: Path) -> list[str]:
     root = Path(root)
     found = []
-    for p in sorted(root.rglob("*")):
+    for p in files(root):
         rel = p.relative_to(root)
         if any(part in SKIP for part in rel.parts) or not p.is_file():
             continue
