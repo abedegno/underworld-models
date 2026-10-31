@@ -63,13 +63,14 @@ def uv_set(glb):
     return {tuple(r) for r in np.round(uv, 4).tolist()}
 
 
-def extent(model: uwvx.Model) -> float:
-    f = next(iter(model.clips.values()))[0]
+def extent(model: uwvx.Model, clip: str = None) -> float:
+    f = model.clips[clip][0] if clip in model.clips else next(iter(model.clips.values()))[0]
     return float((f[:, :3].max(0).astype(int) - f[:, :3].min(0) + 1).max() * model.size) if len(f) else 0.0
 
 
 def size_note(mid, old: uwvx.Model, new: uwvx.Model):
-    a, b = extent(old), extent(new)
+    first = next(iter(old.clips))   # the same clip in both, whatever order the new file has them in
+    a, b = extent(old, first), extent(new, first)
     if a and abs(b / a - 1) > 0.1:
         return (f"{mid}: warning: its size changed from {a:.3f} to {b:.3f} units across, by more than a tenth; "
                 "check it was not scaled by accident")
@@ -95,6 +96,14 @@ def from_magica(path, pal, old: uwvx.Model = None) -> tuple:
     return uwvx.Model(0.01, origin, {"still": [np.c_[v, idx].astype(np.uint8)]}), snapped
 
 
+def in_clip_order(glb, names):
+    """The glb with its clips in the given order (Blender exports them alphabetically); clips not named go last."""
+    anims = glb.json.get("animations", [])
+    rank = {n: i for i, n in enumerate(names)}
+    glb.json["animations"] = sorted(anims, key=lambda a: rank.get(a.get("name"), len(rank)))
+    return glb
+
+
 class Packer:
     def __init__(self, uw1, repo, pal=None, aux_for=None, types=None, force=False):
         self.repo = Path(repo)
@@ -116,6 +125,12 @@ class Packer:
             self.report.append(f"{mid}: {n} {what[:-1] if n == 1 else what} not in the game's palette, snapped to "
                                "the nearest colour in it")
 
+    def repainted(self, mid, new, old):
+        if old is not None and old.shape == new.shape:
+            n = int((new != old).sum())
+            if n:
+                self.report.append(f"{mid}: {n} {'texel' if n == 1 else 'texels'} repainted")
+
     def write_vox(self, mid, model, out: Path):
         old = out / f"{mid}.vox"
         note = size_note(mid, uwvx.read(old), model) if old.exists() else None
@@ -129,6 +144,7 @@ class Packer:
         portglb = self.port / f"{mid}.glb"
         old = gltf.texture(gltf.read(portglb))[..., 0] if portglb.exists() else None
         idx, n = to_indices(tex, self.pal, old)
+        self.repainted(mid, idx, old)
         self.snapped(mid, n)
         gltf.write(gltf.with_texture(g, np.repeat(idx[..., None], 3, 2)), out / f"{mid}.glb")
         if faithful and n:
@@ -179,8 +195,9 @@ class Packer:
         body = int(mid[2:], 8)
         aux = self.aux_for(body)
         base = export.base_aux(body, self.types)
-        g = gltf.read(src)
+        g = in_clip_order(gltf.read(src), gltf.clip_names(gltf.read(self.port / f"{mid}.glb")))
         slots, n = self.creature_slots(mid, g, self.pal[aux[base]])
+        self.repainted(mid, slots, gltf.texture(gltf.read(self.port / f"{mid}.glb"))[..., 0])
         self.snapped(mid, n)
         gltf.write(gltf.with_texture(g, np.repeat(slots[..., None], 3, 2)), out / f"{mid}.glb")
         size = uwvx.read(self.port / f"{mid}.vox").size

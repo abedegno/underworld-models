@@ -5,7 +5,7 @@ import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
 import { readUwvc } from "./uwvc.js";
 
 const $ = id => document.getElementById(id);
-const FRAME_SECONDS = 1 / 5;   // voxel clips step at five frames a second, as the sprites animate
+const FRAME_SECONDS = 1 / 8;   // voxel clips step at eight frames a second: one key frame per sprite frame
 
 const params = new URLSearchParams(location.search);   // id, and optionally view=voxels, colouring=N, clip=name
 const key = params.get("id");

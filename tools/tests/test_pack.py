@@ -66,6 +66,7 @@ def test_painted_colour_snaps_and_reports(tmp_path):
     want = int(((PAL.astype(int) - (1, 2, 3)) ** 2).sum(1).argmin())
     assert idx[0, 0] == want and idx[0, 1] == 21
     assert any("OBJ090" in r and "1 texel" in r and "snapped" in r for r in report)
+    assert "OBJ090: 1 texel repainted" in report
 
 
 def test_creature_shared_colour_keeps_old_slot(tmp_path):
@@ -78,7 +79,7 @@ def test_creature_shared_colour_keeps_old_slot(tmp_path):
         t[0, 3] = shared   # a slot-3 texel repainted in the shared colour; its neighbour is slot 2
         return t
     edit_texture(repo, "CR00", paint)
-    go(repo, aux)
+    assert "CR00: 1 texel repainted" in go(repo, aux)
     slots = gltf.texture(gltf.read(repo / "port/uw1/CR00.glb"))[..., 0]
     assert slots[1, 1] == 1 and slots[1, 2] == 2   # untouched texels keep their slots
     assert slots[0, 3] == 2
@@ -155,3 +156,18 @@ def test_variant_packs_into_its_own_folder(tmp_path):
     assert {k: v for k, v in snapshot(repo).items() if k.parts[0] == "port"} == before
     assert (vdir / "port/OBJ090.glb").exists() and (vdir / "port/OBJ090.vox").exists()
     assert (repo / "site/data/uw1/variants/shiny/OBJ090.uwvc").exists()   # the site's display voxels
+
+
+def test_creature_keeps_clip_order(tmp_path):
+    # Blender exports clips in alphabetical order; the port files keep theirs
+    repo = setup(tmp_path)
+    go(repo, force=True)   # the synthetic voxels were not made from the mesh: make them so first
+    p = repo / "models/uw1/editable/CR00.glb"
+    g = gltf.read(p)
+    g.json["animations"] = g.json["animations"][::-1]
+    edit_texture_glb = gltf.with_texture(g, gltf.texture(g)[..., :3])
+    gltf.write(edit_texture_glb, p)
+    report = go(repo)
+    assert gltf.clip_names(gltf.read(repo / "port/uw1/CR00.glb")) == ["idle", "walking"]
+    assert list(uwvx.read(repo / "port/uw1/CR00.vox").clips) == ["idle", "walking"]
+    assert not any("size" in r for r in report)
