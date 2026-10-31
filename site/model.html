@@ -26,7 +26,7 @@
         <figcaption>The original sprite <span id="spriteView"></span></figcaption>
       </figure>
     </div>
-    <p class="hint">Drag to turn, scroll or pinch to zoom. <span id="frontOnly" hidden>The game shows this animation only from the front, so from here it shows the creature standing.</span></p>
+    <p class="hint">Drag to turn, scroll or pinch to zoom. <span id="noSprite" hidden>The game has no sprite for this animation, so it shows nothing.</span> <span id="frontOnly" hidden>The game shows this animation only from the front, so from here it shows the creature standing.</span></p>
     <div id="spriteControls" class="spritecontrols" hidden>
       <label><input type="checkbox" id="separate"> Turn the sprite separately</label>
       <button id="viewPrev" hidden aria-label="Turn the sprite left">&#9664;</button>
@@ -65,6 +65,7 @@
     <p id="error" class="error" hidden></p>
   </aside>
 </main>
+<footer class="foot">Ultima Underworld belongs to its owners. The models are fan-made; the licence (CC BY-SA 4.0) covers this project's own work only. The original sprites are the game's artwork, are not covered by the licence, and are shown only to compare the models with the original. <a href="https://github.com/abedegno/underworld-models">Source on GitHub</a>.</footer>
 <script type="module" src="js/viewer.js"></script>
 </body>
 </html>

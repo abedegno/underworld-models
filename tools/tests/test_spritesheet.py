@@ -73,3 +73,12 @@ def test_transparent_where_the_aux_gives_index_0():
     aux[0] = aux[4] = 0
     img = np.asarray(spritesheet.sheet([f], aux, PAL))
     assert img[0, 0, 3] == 0 and img[0, 1, 3] == 0 and img[0, 2, 3] == 255
+
+
+def test_json_has_each_frames_bounds(tmp_path):
+    # the page fits the sprite by the frames it shows, not by the cell, which is as wide as the widest frame
+    repo, icons = setup(tmp_path)
+    spritesheet.export(None, repo, pal=PAL, body_reader=body_reader, icons=icons)
+    j = json.loads((repo / "site/sprites/uw1/CR00.json").read_text())
+    cw, ch, ax, ay, offs = spritesheet.layout(body_reader(0)[2])
+    assert j["bounds"] == [[ox, oy, ox + f.width, oy + f.height] for f, (ox, oy) in zip(body_reader(0)[2], offs)]

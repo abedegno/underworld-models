@@ -1,6 +1,6 @@
 // The original sprite beside the model: the frame the game would show for the chosen clip, seen from where the
 // camera is (or turned separately), drawn with whole pixels at the model's size on screen.
-import { VIEWS, viewFor, animFor, frameAt, FPS } from "./spritelogic.js";
+import { VIEWS, viewFor, pick, advance, fitScale, offsetX, FPS } from "./spritelogic.js";
 
 async function get(url) {
   const res = await fetch(url);
@@ -19,7 +19,8 @@ export class SpritePanel {
     if (m.sprite.image) {   // an item: its icon, one picture
       const img = await image(m.sprite.image);
       return new SpritePanel({ cell: [img.width, img.height], anchor: [img.width / 2, img.height], columns: 1,
-                               scale: m.sprite.scale, anims: {}, colourings: {} }, "", img, true);
+                               scale: m.sprite.scale, anims: {}, colourings: {},
+                               bounds: [[0, 0, img.width, img.height]] }, "", img, true);
     }
     const info = await (await get(m.sprite.json)).json();
     const base = m.sprite.json.slice(0, m.sprite.json.lastIndexOf("/") + 1);
@@ -37,7 +38,8 @@ export class SpritePanel {
     this.time = 0;
     this.separate = false;
     this.view = 4;
-    this.shown = { name: "", frontOnly: false, view: 4 };
+    this.shown = { name: "", frontOnly: false, view: 4, index: 0 };
+    this.length = 1;   // frames in the animation shown
   }
 
   setClip(name) { this.clip = name; this.time = 0; }
@@ -47,22 +49,21 @@ export class SpritePanel {
     this.sheets[aux] ??= image(this.base + file);   // each sheet fetched once, when first chosen
     this.sheet = await this.sheets[aux];
   }
-  step(dt) { this.time += dt; }
-  stepFrame(n) { this.time = Math.max(0, (Math.floor(this.time * FPS + 1e-6) + n) / FPS); }
+  step(dt) { this.time = advance(this.time, dt, this.clip, this.length); }
+  stepFrame(n) { this.time = advance(Math.floor(this.time * FPS + 1e-6) / FPS, n / FPS, this.clip, this.length); }
   turn(n) { this.view = (this.view + n + 8) % 8; }
 
-  // The frame to show now: [cell index, the animation's name, whether the game shows it only from the front].
+  // The frame to show now (shown.index is null when the body has no such animation).
   current(angle) {
-    if (this.still) return [0, "", false];
+    if (this.still) return (this.shown = { name: "", frontOnly: false, view: 4, index: 0 });
     const view = this.separate ? this.view : viewFor(angle);
-    const a = animFor(this.clip, view);
-    const frames = this.info.anims[a.name];
-    this.shown = { ...a, view };
-    // an animation the body lacks: the game draws the page's first image
-    return [frames && frames.length ? frameAt(frames, this.clip, this.time) : 0, a.name, a.frontOnly];
+    this.shown = pick(this.info.anims, this.clip, view, this.time);
+    this.length = (this.info.anims[this.shown.name] || [0]).length;
+    return this.shown;
   }
 
-  // Draws on `canvas` with one sprite pixel covering `pxPerUnit * scale` canvas pixels, the anchor (the creature's
+  // Draws on `canvas` with one sprite pixel covering `pxPerUnit * scale` canvas pixels (in whole pixels, and smaller
+  // if the frame would not fit), the anchor (the creature's
   // feet) at canvas height `feetY` (0 to 1 from the top).
   draw(canvas, angle, pxPerUnit, feetY) {
     const dpr = Math.min(devicePixelRatio, 2);
@@ -71,11 +72,21 @@ export class SpritePanel {
     const g = canvas.getContext("2d");
     g.clearRect(0, 0, w, h);
     g.imageSmoothingEnabled = false;
-    const [i] = this.current(angle);
+    const i = this.current(angle).index;
+    if (i === null) return;   // the game draws nothing for an animation the body lacks
     const [cw, ch] = this.info.cell, [ax, ay] = this.info.anchor, cols = this.info.columns;
-    const px = Math.max(1, pxPerUnit * dpr * this.info.scale);
+    const box = this.box();
+    const px = fitScale(pxPerUnit * dpr * this.info.scale, box, this.info.anchor, w, h, feetY);
     g.drawImage(this.sheet, (i % cols) * cw, Math.floor(i / cols) * ch, cw, ch,
-                Math.round(w / 2 - ax * px), Math.round(h * feetY - ay * px), cw * px, ch * px);
+                Math.round(offsetX(w, box, this.info.anchor, px)), Math.round(h * feetY - ay * px), cw * px, ch * px);
+  }
+
+  // The bounds of all the frames of the animation shown, so its size stays the same from frame to frame.
+  box() {
+    const frames = this.still ? [0] : this.info.anims[this.shown.name] || [this.shown.index];
+    const b = frames.map(k => this.info.bounds[k]);
+    return [Math.min(...b.map(x => x[0])), Math.min(...b.map(x => x[1])),
+            Math.max(...b.map(x => x[2])), Math.max(...b.map(x => x[3]))];
   }
 
   viewName() { return this.still ? "" : `(${VIEWS[this.shown.view].replace("_", " ")} view)`; }

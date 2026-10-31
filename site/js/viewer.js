@@ -268,7 +268,8 @@ function drawSprite() {
   feet.set(controls.target.x, 0, controls.target.z).project(camera);
   const angle = Math.atan2(camera.position.x - controls.target.x, camera.position.z - controls.target.z);
   sprite.draw(canvas, angle, pxPerUnit * canvas.clientHeight / view.clientHeight, (1 - feet.y) / 2);
-  $("frontOnly").hidden = !sprite.shown.frontOnly || sprite.still;
+  $("frontOnly").hidden = !sprite.shown.frontOnly || sprite.still || sprite.shown.index === null;
+  $("noSprite").hidden = sprite.shown.index !== null;
   $("spriteView").textContent = sprite.viewName();
 }
 

@@ -4,7 +4,8 @@
   16 cells, each frame placed so that its hotspot lands on the same anchor in its cell (so the sprite does not jump
   between frames); a pixel whose colour is main palette index 0 is transparent.
 - site/sprites/uw1/CRnn.json: the cell size, the anchor, the columns, the scale (0.015 port units a sprite pixel)
-  and each animation's frames, its list cut at its first missing frame.
+  each frame's bounds in its cell [x0, y0, x1, y1], and each animation's frames, its list cut at its first missing
+  frame.
 - site/sprites/uw1/OBJnnn.png: an item's icon from OBJECTS.GR, as the port draws it on the floor.
 These pictures are the game's artwork (site/sprites/NOTICE.md); no game file is copied.
 """
@@ -58,7 +59,7 @@ def export(uw1, repo, pal=None, body_reader=None, icons=None) -> list:
             Image.fromarray(icons[int(mid[3:], 16)]).save(out / f"{mid}.png")
             continue
         anims, aux, frames = body_reader(int(mid[2:], 8))
-        cw, ch, ax, ay, _ = layout(frames)
+        cw, ch, ax, ay, offs = layout(frames)
         colourings = {}
         for c in e["colourings"]:
             a = c["aux"]
@@ -70,5 +71,6 @@ def export(uw1, repo, pal=None, body_reader=None, icons=None) -> list:
         cut = {n: idx[:idx.index(-1)] if -1 in idx else idx for n, idx in anims.items()}
         (out / f"{mid}.json").write_text(json.dumps({
             "cell": [cw, ch], "anchor": [ax, ay], "columns": COLUMNS, "scale": CREATURE_SCALE,
+            "bounds": [[ox, oy, ox + f.width, oy + f.height] for f, (ox, oy) in zip(frames, offs)],
             "anims": {n: v for n, v in cut.items() if v}, "colourings": colourings}, indent=1) + "\n")
     return report
