@@ -37,7 +37,7 @@
     "name": "skeleton warrior"
    }
   ],
-  "editable_sha1": "c0f01e6c86923fafb6eac5266c29aeae93032f6a"
+  "editable_sha1": "c4b386e530ae2f397c8d6caa8ccf3b7ad764745f"
  },
  {
   "id": "CR02",
@@ -59,7 +59,7 @@
     "name": "lizardman, grey"
    }
   ],
-  "editable_sha1": "91385f0672e0e5d151dc5e04e9b1c0ab90590f50"
+  "editable_sha1": "a5bd63a2390f6fe9e5e90dae6d7b959ccf2938cf"
  },
  {
   "id": "CR03",
@@ -77,7 +77,7 @@
     "name": "cave bat, red"
    }
   ],
-  "editable_sha1": "07ff34c983c7ca79d3f0f06c2602fccd8eed5847"
+  "editable_sha1": "bc68e1c18dcbb316ed3f26b881e004da3ce8b973"
  },
  {
   "id": "CR04",
@@ -99,7 +99,7 @@
     "name": "mage in a yellow robe, orange 2"
    }
   ],
-  "editable_sha1": "7ee76d2740edfe24f4345d941c7df2536ed9aee3"
+  "editable_sha1": "0c281303b0eb3697fda068fb4ec4261a3b43465f"
  },
  {
   "id": "CR05",
@@ -121,7 +121,7 @@
     "name": "giant spider, grey 2"
    }
   ],
-  "editable_sha1": "9f4635e0a904346cc6d2b7af5d3a7cc6cb5be0c5"
+  "editable_sha1": "aaa2df3de335e3d2f5bdf6d9d62a4f89b581bdbb"
  },
  {
   "id": "CR06",
@@ -135,7 +135,7 @@
     "name": "gazer, a floating eye"
    }
   ],
-  "editable_sha1": "778505fb8deed4fb0b3d4a6bbc8f14cd78fb1685"
+  "editable_sha1": "7ccef794abcae33d649f3bc9238645531dbc3a3d"
  },
  {
   "id": "CR07",
@@ -157,7 +157,7 @@
     "name": "troll, red"
    }
   ],
-  "editable_sha1": "7b0b820b122ace829027baf1892868e3b7cbbe44"
+  "editable_sha1": "420910e114e28603d3c9b2ea220b571ecc26f5b7"
  },
  {
   "id": "CR10",
@@ -171,7 +171,7 @@
     "name": "woman mage in a blue robe"
    }
   ],
-  "editable_sha1": "7a72cccc5f62b113293e2b8c39fecdb9abef9276"
+  "editable_sha1": "28494ed562a20fff7bc26ca6e4253ddb0ce6d10d"
  },
  {
   "id": "CR11",
@@ -189,7 +189,7 @@
     "name": "flesh slug, green"
    }
   ],
-  "editable_sha1": "042c5e467ec354b937de3ef8a1d253e7e4473c92"
+  "editable_sha1": "a1a0a1b73b4410f15b1deaed8f9c3109280a47c2"
  },
  {
   "id": "CR13",
@@ -211,7 +211,7 @@
     "name": "ghoul, red"
    }
   ],
-  "editable_sha1": "bd0efb47cd63d1f5081edc209eed5a5c6c030047"
+  "editable_sha1": "ea31e2dfa9a05d140e035d1eb183f4fe0f5f3a86"
  },
  {
   "id": "CR14",
@@ -225,7 +225,7 @@
     "name": "horned demon"
    }
   ],
-  "editable_sha1": "c5c075fe555947e323200a38b981231e6feacb85"
+  "editable_sha1": "cabc4425d97739cad415966218e36cb9e0e3cdd0"
  },
  {
   "id": "CR15",
@@ -251,7 +251,7 @@
     "name": "ghost, blue 2"
    }
   ],
-  "editable_sha1": "8e150c93b0a371168e9a23f9ceabcaff26fd0e7f"
+  "editable_sha1": "0006443a769ff33ba96d5f9ec6bd38e592984f58"
  },
  {
   "id": "CR16",
@@ -283,7 +283,7 @@
     "name": "reaper, a living dead tree"
    }
   ],
-  "editable_sha1": "dbd44f072a7086f36da8d7bdc5bb22ac68fb4df9"
+  "editable_sha1": "f4f8efea479fd64bdba5a2e43a95aac8396a8bf4"
  },
  {
   "id": "CR20",
@@ -301,7 +301,7 @@
     "name": "giant rat, grey"
    }
   ],
-  "editable_sha1": "c146ca73cf342b76fd35f9dc186de0c30c293e95"
+  "editable_sha1": "79ee7678d78474ca93244b706d9f53d1683d4878"
  },
  {
   "id": "CR21",
@@ -319,7 +319,7 @@
     "name": "woman fighter, orange 2"
    }
   ],
-  "editable_sha1": "99bffad9b44afa97ade2c9df888429dbb7f1e08d"
+  "editable_sha1": "b489767e8ad849c0b07c87fa18ef488f2c7a89c5"
  },
  {
   "id": "CR22",
@@ -337,7 +337,7 @@
     "name": "imp, orange"
    }
   ],
-  "editable_sha1": "156d3e90c2e9a65a1f4c7f823421a4ec1462df55"
+  "editable_sha1": "e88163fdd08de72684dd976c1ea28303b2e49ea4"
  },
  {
   "id": "CR23",
@@ -359,7 +359,7 @@
     "name": "earth golem, orange 2"
    }
   ],
-  "editable_sha1": "9ee5c4ddccb822c855f45ed20737832a09232510"
+  "editable_sha1": "2e6c016dfe8321345c9ec8c265c8e1d0cf24ce18"
  },
  {
   "id": "CR24",
@@ -373,7 +373,7 @@
     "name": "headless"
    }
   ],
-  "editable_sha1": "543fe1724125d3f3e7f7533a90119578302a2cd8"
+  "editable_sha1": "648d3c8982bc3bf03c1571066a9c13bacae8b5c4"
  },
  {
   "id": "CR25",
@@ -391,7 +391,7 @@
     "name": "mage in a blue robe with a staff, red"
    }
   ],
-  "editable_sha1": "cf9acda9fc03c8a2975af60a6f73e8e9fd7b87eb"
+  "editable_sha1": "194288372e6b7a3014742e38483346a59350868c"
  },
  {
   "id": "CR26",
@@ -409,7 +409,7 @@
     "name": "rotworm, green"
    }
   ],
-  "editable_sha1": "e626849f15b14c8f9bc276e01b4a5ea823200bbf"
+  "editable_sha1": "e7250b39945e7f8fb67075acafe475e1441ac530"
  },
  {
   "id": "CR31",
@@ -453,7 +453,7 @@
     "name": "human fighter, green 2"
    }
   ],
-  "editable_sha1": "ba0117c4a552c6038f6aa3b8bcfd751267039bcc"
+  "editable_sha1": "1f78f345abcfa2953b569b862a5b7670fd06d8ae"
  },
  {
   "id": "CR33",
@@ -471,7 +471,7 @@
     "name": "dwarf warrior, orange 2"
    }
   ],
-  "editable_sha1": "aa2571e72d0da2c9f2c8bdef74946fb2f54effb8"
+  "editable_sha1": "b7db98d5cb568b04f203b0902c9163b0bddd4aa9"
  },
  {
   "id": "CR35",
