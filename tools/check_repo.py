@@ -11,7 +11,8 @@ from pathlib import Path
 
 from PIL import Image
 
-GAME_FILES = ["*.dat", "*.gr", "*.ark", "*.anm", "*.pak", "*.byt", "*.tr", "*.n0?", "cr*page*"]
+GAME_FILES = ["*.dat", "*.gr", "*.ark", "*.anm", "*.pak", "*.byt", "*.tr", "*.n0?", "cr*page*", "*.sys", "*.voc",
+              "*.xmi", "uw.ad", "uw.mt", "*.exe", "*.com", "*.gog", "*.ins", "*.cue"]
 MAX_BYTES = 15 * 1024 * 1024
 SKIP = {".git", ".venv", "__pycache__", ".pytest_cache", "_site", ".superpowers"}
 ICON_SIDE = 64
@@ -38,11 +39,13 @@ def problems(root: Path) -> list[str]:
             found.append(f"{rel}: looks like a game file; game files must never be committed")
         elif p.stat().st_size > MAX_BYTES:
             found.append(f"{rel}: {p.stat().st_size // (1024 * 1024)} MB, over the 15 MB limit")
-        elif name.endswith(".png"):
-            try:
-                w, h = Image.open(p).size
-            except OSError:
-                found.append(f"{rel}: not a readable PNG")
+        else:
+            try:   # any picture, whatever its name, by its content
+                with Image.open(p) as im:
+                    w, h = im.size
+            except Exception:
+                if name.endswith(".png"):
+                    found.append(f"{rel}: not a readable PNG")
                 continue
             if w <= ICON_SIDE and h <= ICON_SIDE:
                 found.append(f"{rel}: {w}x{h} picture, small enough to be a sprite or icon export")

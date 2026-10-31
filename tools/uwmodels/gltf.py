@@ -66,8 +66,10 @@ def accessor(glb: Glb, i: int) -> np.ndarray:
 
 
 def texture(glb: Glb) -> np.ndarray:
+    """The first image as (h, w, 3) RGB, whatever mode it was saved in (another editor may save an indexed or grey
+    PNG). The port's own textures repeat a palette number in all three channels."""
     img = glb.json["images"][0]
-    return np.asarray(Image.open(io.BytesIO(view_bytes(glb, img["bufferView"]))))
+    return np.asarray(Image.open(io.BytesIO(view_bytes(glb, img["bufferView"]))).convert("RGB"))
 
 
 def with_views(glb: Glb, replace: dict) -> Glb:

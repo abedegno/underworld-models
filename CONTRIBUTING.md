@@ -25,7 +25,7 @@ A maintainer then builds the port files from your model with `tools/pack.py` and
 
 ## Rules for the files
 
-- Colours are always snapped to the game's palette of 256 colours. A colour that is not in the palette becomes the nearest colour that is, so keep to the colours the model already uses where you can.
+- Colours are always snapped. An object's colours are snapped to the game's palette of 256 colours. A creature's colours are snapped to the 32 colours of its own palette, which are the colours already on the model, because the game recolours those 32 for each creature that shares the body. So paint a creature only with colours it already has.
 - A creature's texture must keep its size and its UV layout, which is how the picture is laid over the model. The tools use the layout to tell apart the parts that change colour between creatures that share a body, e.g., the four goblins. If the size or layout changes, `tools/pack.py` refuses the model.
 - Creatures are edited as smooth models only. Their voxels are made from the smooth model for every frame of every animation.
 - An object's voxel model can be edited by hand. Once it has been, the voxel model is that object's master copy, and a later change to the smooth model no longer changes its voxels.
@@ -41,14 +41,14 @@ python3 -m venv .venv
 .venv/bin/python tools/pack.py /path/to/your/UW1
 ```
 
-`tools/pack.py` rebuilds only the models whose files changed, and it prints a note for each one. For example, it tells you how many texels you repainted, how many colours it snapped to the palette, and whether a model's size changed by more than a tenth.
+`tools/pack.py` rebuilds only the models whose files changed, and their pictures for the site, and it prints a note for each one. For example, it tells you how many texels you repainted, how many colours it snapped, and whether a model's size changed by more than a tenth. If it can't use a model, e.g., a creature whose texture changed size, it refuses that model, writes nothing for it, packs the rest, and ends with a list of the models it refused.
 
 ## Variants
 
-A variant is a more detailed or reimagined version of a model. Put it in `variants/uw1/<name>/`, where `<name>` is a short name for your set, with the same file name as the model it is based on, e.g., `variants/uw1/hires/CR00.glb`. Add a `variant.json` file beside it:
+A variant is a more detailed or reimagined version of a model. An object variant can be anything. A creature variant must keep the faithful model's texture size and UV layout, so it can be repainted and reshaped but not given a new texture layout, because the tools need the layout to give it each creature's colours. Put it in `variants/uw1/<name>/`, where `<name>` is a short name for your set, with the same file name as the model it is based on, e.g., `variants/uw1/hires/CR00.glb`. Add a `variant.json` file beside it:
 
 ```
 {"name": "high detail", "author": "your name", "of": ["CR00"]}
 ```
 
-A maintainer builds its port files with `tools/pack.py --variant <name>`, and the site shows it next to the faithful model.
+A maintainer builds its port files and its picture for the site with `tools/pack.py --variant <name>`, and the site shows it next to the faithful model. Its port files go in `variants/uw1/<name>/port/uw1/`.

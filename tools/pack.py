@@ -18,13 +18,20 @@ if __name__ == "__main__":
     variant = None
     if "--variant" in args:
         k = args.index("--variant")
+        if k + 1 >= len(args):
+            sys.exit("--variant needs the variant's name")
         variant = args[k + 1]
         del args[k:k + 2]
     args = [a for a in args if a != "--force"]
+    if not args:
+        sys.exit(__doc__)
     try:
-        report = pack.run(Path(args[0]), Path("."), args[1:] or None, variant=variant, force=force)
-    except pack.PackError as e:
+        p = pack.Packer(Path(args[0]), Path("."), force=force)
+        report = p.variant(variant, args[1:] or None) if variant else p.run(args[1:] or None)
+    except (pack.PackError, OSError) as e:
         sys.exit(str(e))
     for line in report:
         print(line)
+    if p.refused:
+        sys.exit(f"{len(p.refused)} refused: {' '.join(p.refused)}")
     print("done" if not report else f"done, {len(report)} notes")

@@ -32,4 +32,4 @@ Only the slots the model uses are listed.
 
 ## The manifest (`models/uw1/manifest.json`)
 
-The manifest lists every model, with its name, kind, colourings and master copy (`smooth` or `voxel`). It also keeps a checksum of each editable file, so `tools/pack.py` can tell which models changed.
+The manifest lists every model, with its name, kind, colourings and master copy (`smooth` or `voxel`). It also keeps a checksum of each editable file and of each MagicaVoxel copy, so `tools/pack.py` can tell which models changed.

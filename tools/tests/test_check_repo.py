@@ -61,3 +61,18 @@ def test_skips_what_git_ignores(tmp_path):
     write(tmp_path, "new/PALS.DAT")   # untracked but not ignored: could be committed, so flagged
     found = problems(tmp_path)
     assert len(found) == 1 and "PALS.DAT" in found[0]
+
+
+def test_flags_more_game_files(tmp_path):
+    for rel in ["DATA/FONT4X5P.SYS", "UW.EXE", "SOUND/UW.AD", "SOUND/UW01.XMI", "SOUND/x.voc", "game.gog", "game.ins", "game.cue"]:
+        write(tmp_path, rel)
+    assert len(problems(tmp_path)) == 8
+
+
+def test_flags_tiny_image_of_any_format(tmp_path):
+    p = tmp_path / "sprites/obj.gif"
+    p.parent.mkdir(parents=True)
+    Image.fromarray(np.zeros((16, 16, 3), np.uint8)).save(p)
+    q = tmp_path / "sprites/obj.dat2"   # an image whatever its name
+    Image.fromarray(np.zeros((16, 16, 3), np.uint8)).save(q, "BMP")
+    assert len(problems(tmp_path)) == 2

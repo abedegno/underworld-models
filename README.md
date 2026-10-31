@@ -20,7 +20,7 @@ The repo holds 26 creature bodies with their animations and 185 floor object mod
 
 The models in `models/` and `port/` follow the original sprites as closely as we can manage: the same shape, size, colours and movement. That set is the faithful set, and a change to it should bring a model closer to its sprite.
 
-More detailed or reimagined versions are welcome too. They go in `variants/uw1/<your variant's name>/`, and the site shows them next to the model they are based on. A variant never replaces a faithful model.
+More detailed or reimagined versions are welcome too (a creature's must keep its texture layout, as [CONTRIBUTING.md](CONTRIBUTING.md) explains). They go in `variants/uw1/<your variant's name>/`, and the site shows them next to the model they are based on. A variant never replaces a faithful model.
 
 ## How to help
 

@@ -87,3 +87,26 @@ def test_no_file_over_15mb_in_site(repo, tmp_path):
     out = tmp_path / "out"
     build.build(repo, out)
     assert all(p.stat().st_size <= 15 * 1024 * 1024 for p in out.rglob("*") if p.is_file())
+
+
+def test_broken_variants_never_stop_the_build(repo, tmp_path):
+    import shutil
+    a, b, c = (repo / f"variants/uw1/{n}" for n in ("cut", "listy", "badvox"))
+    for d in (a, b, c):
+        d.mkdir(parents=True)
+    good = (repo / "models/uw1/editable/OBJ090.glb").read_bytes()
+    (a / "variant.json").write_text('{"name": "cut", "of": ["OBJ090"]}')
+    (a / "OBJ090.glb").write_bytes(good[:30])   # a truncated glb
+    (b / "variant.json").write_text('["OBJ090"]')   # json, but not an object
+    (c / "variant.json").write_text('{"name": "badvox", "of": ["CR00"]}')
+    shutil.copyfile(repo / "models/uw1/editable/OBJ090.glb", c / "CR00.glb")   # no clips: the voxels give them
+    for n, mid in (("cut", "OBJ090"), ("badvox", "CR00")):
+        for sub, ext in (("site/data/uw1/variants", ".uwvc"), ("site/thumbs/uw1/variants", ".png")):
+            (repo / sub / n).mkdir(parents=True, exist_ok=True)
+        (repo / f"site/thumbs/uw1/variants/{n}/{mid}.png").write_bytes((repo / "site/thumbs/uw1/OBJ090.png").read_bytes())
+    (repo / "site/data/uw1/variants/cut/OBJ090.uwvc").write_bytes((repo / "site/data/uw1/OBJ090.uwvc").read_bytes())
+    (repo / "site/data/uw1/variants/badvox/CR00.uwvc").write_bytes(b"UWVC\x01")   # truncated
+    out = tmp_path / "out"
+    report = build.build(repo, out)
+    assert len(report) == 3, report
+    assert {m["id"] for m in models(out)} == {"OBJ090", "OBJ0c1", "CR00"}

@@ -88,8 +88,8 @@ def test_creature_shared_colour_keeps_old_slot(tmp_path):
 def test_creature_refuses_changed_texture_size(tmp_path):
     repo = setup(tmp_path)
     edit_texture(repo, "CR00", lambda t: np.repeat(np.repeat(t, 2, 0), 2, 1))
-    with pytest.raises(pack.PackError, match="CR00.*texture size"):
-        go(repo)
+    report = go(repo)
+    assert any(r.startswith("CR00: refused") and "texture size" in r for r in report)
 
 
 def test_creature_refuses_changed_uvs(tmp_path):
@@ -101,8 +101,8 @@ def test_creature_refuses_changed_uvs(tmp_path):
     uv[0] = (0.3, 0.3)
     g = gltf.with_views(g, {g.json["accessors"][i]["bufferView"]: uv.astype(np.float32).tobytes()})
     gltf.write(g, p)
-    with pytest.raises(pack.PackError, match="CR00.*UV layout"):
-        go(repo)
+    report = go(repo)
+    assert any(r.startswith("CR00: refused") and "UV layout" in r for r in report)
 
 
 def test_size_change_warns(tmp_path):
@@ -154,7 +154,8 @@ def test_variant_packs_into_its_own_folder(tmp_path):
     before = snapshot(repo)
     go(repo, variant="shiny")
     assert {k: v for k, v in snapshot(repo).items() if k.parts[0] == "port"} == before
-    assert (vdir / "port/OBJ090.glb").exists() and (vdir / "port/OBJ090.vox").exists()
+    assert (vdir / "port/uw1/OBJ090.glb").exists() and (vdir / "port/uw1/OBJ090.vox").exists()
+    assert (repo / "site/thumbs/uw1/variants/shiny/OBJ090.png").exists()
     assert (repo / "site/data/uw1/variants/shiny/OBJ090.uwvc").exists()   # the site's display voxels
 
 
@@ -171,3 +172,57 @@ def test_creature_keeps_clip_order(tmp_path):
     assert gltf.clip_names(gltf.read(repo / "port/uw1/CR00.glb")) == ["idle", "walking"]
     assert list(uwvx.read(repo / "port/uw1/CR00.vox").clips) == ["idle", "walking"]
     assert not any("size" in r for r in report)
+
+
+def test_one_refusal_does_not_stop_the_run(tmp_path):
+    repo = setup(tmp_path)
+    edit_texture(repo, "CR00", lambda t: np.repeat(np.repeat(t, 2, 0), 2, 1))
+
+    def paint(t):
+        t[0, 0] = (1, 2, 3)
+        return t
+    edit_texture(repo, "OBJ090", paint)
+    p = pack.Packer(None, repo, PAL, AUX.get, TYPES)
+    report = p.run()
+    assert p.refused == ["CR00"]
+    assert "OBJ090: 1 texel repainted" in report   # packed though CR00, before it in the manifest, was refused
+    assert entry(repo, "OBJ090")["editable_sha1"] == export.sha1(repo / "models/uw1/editable/OBJ090.glb")
+
+
+def test_creature_snaps_to_its_own_colours(tmp_path):
+    repo = setup(tmp_path)
+
+    def paint(t):
+        t[0, 1] = PAL[200]   # a palette colour, but not one of this creature's 32
+        return t
+    edit_texture(repo, "CR00", paint)
+    report = go(repo)
+    assert any("CR00" in r and "this creature's 32 colours" in r for r in report)
+
+
+def test_pack_redraws_thumbnail(tmp_path):
+    repo = setup(tmp_path)
+
+    def paint(t):
+        t[:] = PAL[40]
+        return t
+    edit_texture(repo, "OBJ090", paint)
+    go(repo)
+    assert (repo / "site/thumbs/uw1/OBJ090.png").exists()
+
+
+def test_indexed_png_from_another_editor(tmp_path):
+    from PIL import Image
+    import io
+    repo = setup(tmp_path)
+    p = repo / "models/uw1/editable/OBJ090.glb"
+    g = gltf.read(p)
+    rgb = gltf.texture(g)[..., :3]
+    b = io.BytesIO()
+    Image.fromarray(rgb).convert("P", palette=Image.ADAPTIVE).save(b, "PNG")   # GIMP and others may save an indexed PNG
+    g = gltf.with_views(g, {g.json["images"][0]["bufferView"]: b.getvalue()})
+    gltf.write(g, p)
+    report = go(repo)
+    assert not any("refused" in r or "snapped" in r for r in report)
+    assert np.array_equal(gltf.texture(gltf.read(repo / "port/uw1/OBJ090.glb"))[..., 0],
+                          np.array([[20, 21, 22, 23]] * 4))

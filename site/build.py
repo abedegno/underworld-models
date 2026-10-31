@@ -47,35 +47,46 @@ def faithful(repo: Path, e: dict) -> dict:
 
 def variants(repo: Path, known: dict, report: list) -> list:
     out = []
-    for vdir in sorted((repo / "variants/uw1").glob("*/")) if (repo / "variants/uw1").exists() else []:
+    root = repo / "variants/uw1"
+    for vdir in sorted(root.glob("*/")) if root.exists() else []:
         try:
             info = json.loads((vdir / "variant.json").read_text())
+            if not isinstance(info, dict) or not isinstance(info.get("of", []), list):
+                raise ValueError('it must be an object with "of", a list of model ids')
         except (OSError, ValueError) as err:
-            report.append(f"variants/uw1/{vdir.name}: skipped, its variant.json cannot be read ({err})")
+            report.append(f"variants/uw1/{vdir.name}: skipped, its variant.json cannot be used ({err})")
             continue
         for mid in info.get("of", []):
-            glb, uwvc = vdir / f"{mid}.glb", repo / f"site/data/uw1/variants/{vdir.name}/{mid}.uwvc"
-            thumb = repo / f"site/thumbs/uw1/variants/{vdir.name}/{mid}.png"
-            missing = [p.name for p in (glb, uwvc, thumb) if not p.exists()]
-            if mid not in known or missing:
-                report.append(f"variants/uw1/{vdir.name}/{mid}: skipped, "
-                              + ("no faithful model of that name" if mid not in known else f"missing {', '.join(missing)}"))
-                continue
             try:
-                gltf.read(glb)
-            except (OSError, ValueError) as err:
-                report.append(f"variants/uw1/{vdir.name}/{mid}: skipped, {glb.name} cannot be read ({err})")
-                continue
-            base = known[mid]
-            rel = f"variants/uw1/{vdir.name}/{mid}.glb"
-            out.append({**base, "key": f"{vdir.name}/{mid}", "name": f"{base['name']} ({info.get('name', vdir.name)})",
-                        "variant_of": base["name"], "author": info.get("author"), "master": "smooth",
-                        "thumb": f"thumbs/uw1/variants/{vdir.name}/{mid}.png", "smooth": rel,
-                        "voxels": f"data/uw1/variants/{vdir.name}/{mid}.uwvc",
-                        "clips": clips_of(glb, uwvc) if base["kind"] == "creature" else [],
-                        "colourings": [], "download": rel, "github": GITHUB + rel,
-                        "howto": GITHUB + "docs/blender.md"})
+                entry = variant_entry(repo, vdir, info, str(mid), known)
+            except Exception as err:   # a broken file in one variant must never stop the site's build
+                entry = f"skipped, it cannot be read ({type(err).__name__}: {err})"
+            if isinstance(entry, str):
+                report.append(f"variants/uw1/{vdir.name}/{mid}: {entry}")
+            else:
+                out.append(entry)
     return out
+
+
+def variant_entry(repo, vdir, info, mid, known):
+    """A variant's models.json entry, or a string saying why it is skipped."""
+    glb, uwvc = vdir / f"{mid}.glb", repo / f"site/data/uw1/variants/{vdir.name}/{mid}.uwvc"
+    thumb = repo / f"site/thumbs/uw1/variants/{vdir.name}/{mid}.png"
+    if mid not in known:
+        return "skipped, no faithful model of that name"
+    missing = [p.name for p in (glb, uwvc, thumb) if not p.exists()]
+    if missing:
+        return f"skipped, missing {', '.join(missing)}"
+    gltf.read(glb)
+    read_uwvc(uwvc)
+    base = known[mid]
+    rel = f"variants/uw1/{vdir.name}/{mid}.glb"
+    return {**base, "key": f"{vdir.name}/{mid}", "name": f"{base['name']} ({info.get('name', vdir.name)})",
+            "variant_of": base["name"], "author": info.get("author"), "master": "smooth",
+            "thumb": f"thumbs/uw1/variants/{vdir.name}/{mid}.png", "smooth": rel,
+            "voxels": f"data/uw1/variants/{vdir.name}/{mid}.uwvc",
+            "clips": clips_of(glb, uwvc) if base["kind"] == "creature" else [],
+            "colourings": [], "download": rel, "github": GITHUB + rel, "howto": GITHUB + "docs/blender.md"}
 
 
 def build(repo: Path, out: Path) -> list:

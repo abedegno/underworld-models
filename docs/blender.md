@@ -13,7 +13,7 @@ A creature comes in with its skeleton and all of its animations. You can play an
 ## Painting colours
 
 1. Select the model and switch to the Texture Paint workspace with the tab at the top of the window.
-2. Paint on the model or on the image. Pick colours from the model itself where you can, by holding S over the model to sample its colour, because colours are snapped to the game's palette later.
+2. Paint on the model or on the image. Pick colours from the model itself, by holding S over the model to sample its colour. An object's colours are snapped to the game's palette later, and a creature's to the colours already on it, so a creature can only use those.
 3. When you have finished, go to the Image Editor and choose Image, then Pack. Packing keeps your painted pixels with the file. If you skip it, the export may save the old texture.
 
 Keep the texture's size. Don't move, add or remove UVs, which set how the texture is laid over the model. For a creature, `tools/pack.py` refuses a texture whose size or UV layout changed.
@@ -45,4 +45,4 @@ If you own the game, run `tools/pack.py` as [CONTRIBUTING.md](../CONTRIBUTING.md
 CR00: 16 texels repainted
 ```
 
-A note that colours were snapped to the palette means some colours you used are not in the game's palette, and the nearest palette colours were used instead.
+A note that colours were snapped means some colours you used are not ones the model can have, and the nearest that it can have were used instead. For an object those are the game's 256 colours, and for a creature the 32 colours already on it.

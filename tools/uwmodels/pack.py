@@ -19,7 +19,7 @@ from pathlib import Path
 
 import numpy as np
 
-from . import export, game, gltf, magica, uwvx, voxelise
+from . import export, game, gltf, magica, thumbs, uwvx, voxelise
 from .uwvc import used_slots, write_uwvc
 
 
@@ -113,17 +113,24 @@ class Packer:
         self.force = force
         self.names = export.read_names(self.repo)
         self.report = []
+        self.refused = []
         r = self.repo
         self.port, self.editable, self.voxels, self.data = (r / "port/uw1", r / "models/uw1/editable",
                                                             r / "models/uw1/voxels", r / "site/data/uw1")
+        self.thumbs = r / "site/thumbs/uw1"
 
     def changed(self, path: Path, known) -> bool:
         return path.exists() and (self.force or export.sha1(path) != known)
 
-    def snapped(self, mid, n, what="texels"):
+    def snapped(self, mid, n, what="texels", creature=False):
         if n:
-            self.report.append(f"{mid}: {n} {what[:-1] if n == 1 else what} not in the game's palette, snapped to "
-                               "the nearest colour in it")
+            where = "this creature's 32 colours" if creature else "the game's palette"
+            self.report.append(f"{mid}: {n} {what[:-1] if n == 1 else what} not among {where}, snapped to the "
+                               "nearest of them")
+
+    def thumb(self, uwvc: Path, dst: Path):
+        dst.parent.mkdir(parents=True, exist_ok=True)
+        thumbs.render(uwvc).save(dst)
 
     def repainted(self, mid, new, old):
         if old is not None and old.shape == new.shape:
@@ -168,6 +175,7 @@ class Packer:
                 self.write_vox(mid, voxelise.item(gltf.read(self.port / f"{mid}.glb"), idx), self.port)
                 e["voxel_sha1"] = export.item_display(mid, uwvx.read(self.port / f"{mid}.vox"), self.pal,
                                                       self.voxels, self.data)
+                self.thumb(self.data / f"{mid}.uwvc", self.thumbs / f"{mid}.png")
         if e["master"] == "voxel" and (vox_edited or self.force):
             model, n = from_magica(src_vox, self.pal, uwvx.read(self.port / f"{mid}.vox"))
             self.snapped(mid, n, "voxels")
@@ -176,6 +184,7 @@ class Packer:
                 magica.write(src_vox, model.clips["still"][0][:, :3], self.pal[model.clips["still"][0][:, 3]])
             export.item_uwvc(mid, model, self.pal, self.data)
             e["voxel_sha1"] = export.sha1(src_vox)
+            self.thumb(self.data / f"{mid}.uwvc", self.thumbs / f"{mid}.png")
 
     def creature_slots(self, mid, g, base):
         old_glb = gltf.read(self.port / f"{mid}.glb")
@@ -198,7 +207,7 @@ class Packer:
         g = in_clip_order(gltf.read(src), gltf.clip_names(gltf.read(self.port / f"{mid}.glb")))
         slots, n = self.creature_slots(mid, g, self.pal[aux[base]])
         self.repainted(mid, slots, gltf.texture(gltf.read(self.port / f"{mid}.glb"))[..., 0])
-        self.snapped(mid, n)
+        self.snapped(mid, n, creature=True)
         gltf.write(gltf.with_texture(g, np.repeat(slots[..., None], 3, 2)), out / f"{mid}.glb")
         size = uwvx.read(self.port / f"{mid}.vox").size
         model = voxelise.creature(gltf.read(out / f"{mid}.glb"), slots, size)
@@ -209,6 +218,7 @@ class Packer:
             e["colourings"] = export.creature_display(mid, e["name"], model, slots, aux, base, self.types, self.pal,
                                                       self.data, self.names)
             e["editable_sha1"] = export.sha1(src)
+            self.thumb(self.data / f"{mid}.uwvc", self.thumbs / f"{mid}.png")
 
     def run(self, ids=None):
         path = self.repo / "models/uw1/manifest.json"
@@ -216,19 +226,26 @@ class Packer:
         for e in manifest:
             if ids and e["id"] not in ids:
                 continue
-            if e["kind"] == "item":
-                self.item(e)
-            elif self.changed(self.editable / f"{e['id']}.glb", e.get("editable_sha1")):
-                self.creature(e, self.editable / f"{e['id']}.glb", self.port, True)
+            try:
+                if e["kind"] == "item":
+                    self.item(e)
+                elif self.changed(self.editable / f"{e['id']}.glb", e.get("editable_sha1")):
+                    self.creature(e, self.editable / f"{e['id']}.glb", self.port, True)
+            except (PackError, ValueError, OSError) as err:   # refuse this model only; the others still pack
+                self.refuse(e["id"], err)
         path.write_text(json.dumps(manifest, indent=1) + "\n")
         return self.report
+
+    def refuse(self, mid, err):
+        self.refused.append(mid)
+        self.report.append(f"{mid}: refused, nothing written for it: {err}")
 
     def variant(self, name, ids=None):
         vdir = self.repo / "variants/uw1" / name
         if not vdir.is_dir():
             raise PackError(f"no variant folder variants/uw1/{name}")
-        out = vdir / "port"
-        out.mkdir(exist_ok=True)
+        out = vdir / "port/uw1"   # the port reads <modelpath>/uw1/, so modelpath is the variant's port folder
+        out.mkdir(parents=True, exist_ok=True)
         data = self.data / "variants" / name   # the site's display voxels
         data.mkdir(parents=True, exist_ok=True)
         known = {e["id"]: e for e in json.loads((self.repo / "models/uw1/manifest.json").read_text())}
@@ -238,17 +255,21 @@ class Packer:
                 if mid not in known:
                     self.report.append(f"{name}/{src.name}: no faithful model of that name; skipped")
                 continue
-            if known[mid]["kind"] == "item":
-                _, idx = self.item_glb(mid, src, out, False)
-                model = voxelise.item(gltf.read(out / f"{mid}.glb"), idx)
-                self.write_vox(mid, model, out)
-                export.item_uwvc(mid, model, self.pal, data)
-            else:
-                self.creature(dict(known[mid]), src, out, False)
-                body = int(mid[2:], 8)
-                base = self.aux_for(body)[export.base_aux(body, self.types)]
-                model = uwvx.read(out / f"{mid}.vox")
-                write_uwvc(model, [{s: tuple(self.pal[base[s]]) for s in used_slots(model)}], data / f"{mid}.uwvc")
+            try:
+                if known[mid]["kind"] == "item":
+                    _, idx = self.item_glb(mid, src, out, False)
+                    model = voxelise.item(gltf.read(out / f"{mid}.glb"), idx)
+                    self.write_vox(mid, model, out)
+                    export.item_uwvc(mid, model, self.pal, data)
+                else:
+                    self.creature(dict(known[mid]), src, out, False)
+                    body = int(mid[2:], 8)
+                    base = self.aux_for(body)[export.base_aux(body, self.types)]
+                    model = uwvx.read(out / f"{mid}.vox")
+                    write_uwvc(model, [{s: tuple(self.pal[base[s]]) for s in used_slots(model)}], data / f"{mid}.uwvc")
+                self.thumb(data / f"{mid}.uwvc", self.thumbs / "variants" / name / f"{mid}.png")
+            except (PackError, ValueError, OSError) as err:
+                self.refuse(f"{name}/{mid}", err)
         return self.report
 
 
