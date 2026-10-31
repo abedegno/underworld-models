@@ -3,11 +3,12 @@ import * as THREE from "three";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
 import { readUwvc } from "./uwvc.js";
+import { SpritePanel } from "./sprite.js";
 
 const $ = id => document.getElementById(id);
 const FRAME_SECONDS = 1 / 8;   // voxel clips step at eight frames a second: one key frame per sprite frame
 
-const params = new URLSearchParams(location.search);   // id, and optionally view=voxels, colouring=N, clip=name
+const params = new URLSearchParams(location.search);   // id; optionally view=voxels, colouring=N, clip=name, yaw=degrees
 const key = params.get("id");
 const models = await (await fetch("data/models.json")).json();
 const m = models.find(x => x.key === key);
@@ -38,7 +39,7 @@ const camera = new THREE.PerspectiveCamera(30, 1, 0.01, 100);
 const controls = new OrbitControls(camera, renderer.domElement);
 controls.enableDamping = true;
 
-let smooth = null, mixer = null, action = null, voxels = null, playing = true, showing = "smooth";
+let smooth = null, mixer = null, action = null, voxels = null, playing = true, showing = "smooth", sprite = null;
 const clock = new THREE.Clock();
 
 function fail(text) {
@@ -53,7 +54,8 @@ function fit(object) {
   const size = box.getSize(new THREE.Vector3()), centre = box.getCenter(new THREE.Vector3());
   const r = Math.max(size.x, size.y, size.z) || 1;
   controls.target.copy(centre);
-  camera.position.copy(centre).add(new THREE.Vector3(0.55, 0.35, 1).normalize().multiplyScalar(r * 2.9));
+  const yaw = params.has("yaw") ? (Number(params.get("yaw")) * Math.PI) / 180 : Math.atan2(0.55, 1);
+  camera.position.copy(centre).add(new THREE.Vector3(Math.sin(yaw), 0.3, Math.cos(yaw)).normalize().multiplyScalar(r * 2.9));
   camera.near = r / 100;
   camera.far = r * 100;
   camera.updateProjectionMatrix();
@@ -159,6 +161,7 @@ function playClip(name) {
       action.paused = !playing;
     }
   }
+  if (sprite) sprite.setClip(name);
   if (voxels && voxels.data.clips.has(name)) {
     voxels.clip = name;
     voxels.frame = 0;
@@ -167,6 +170,7 @@ function playClip(name) {
 }
 
 async function setColouring(i) {
+  if (sprite && m.colourings[i]) sprite.setColouring(String(m.colourings[i].aux));
   if (voxels) {
     voxels.colouring = i;
     voxels.show();
@@ -207,7 +211,15 @@ if (clipNames.length > 1 || m.kind === "creature") {
     playing = !playing;
     $("play").textContent = playing ? "Pause" : "Play";
     if (action) action.paused = !playing;
+    $("stepRow").hidden = playing;
   });
+  const stepFrame = n => {   // one frame of the sprite and one key (an eighth of a second) of the model
+    if (sprite) sprite.stepFrame(n);
+    if (action) { action.time = Math.max(0, Math.min(action.getClip().duration, action.time + n / 8)); mixer.update(0); }
+    if (voxels && showing === "voxels") { const k = voxels.data.clips.get(voxels.clip).length; voxels.frame = (voxels.frame + n + k) % k; voxels.show(); }
+  };
+  $("framePrev").addEventListener("click", () => stepFrame(-1));
+  $("frameNext").addEventListener("click", () => stepFrame(1));
 }
 if (m.colourings.length > 1) {
   $("colourRow").hidden = false;
@@ -222,6 +234,23 @@ if (!m.smooth) {
 $("smooth").addEventListener("click", () => showMode("smooth"));
 $("voxels").addEventListener("click", () => showMode("voxels"));
 
+// The sprite loads beside the model and never holds it up; a page without sprite files simply has no panel.
+const colourAux = () => (m.colourings.length ? String(m.colourings[Number($("colour").value || 0)].aux) : "");
+SpritePanel.load(m, colourAux()).then(panel => {
+  if (!panel) return;
+  sprite = panel;
+  sprite.setClip($("clip").value || "idle");
+  $("spritePanel").hidden = false;
+  $("spriteControls").hidden = sprite.still;
+  $("separate").addEventListener("change", () => {
+    sprite.separate = $("separate").checked;
+    sprite.view = sprite.shown.view;
+    $("viewPrev").hidden = $("viewNext").hidden = !sprite.separate;
+  });
+  $("viewPrev").addEventListener("click", () => sprite.turn(-1));
+  $("viewNext").addEventListener("click", () => sprite.turn(1));
+}).catch(() => {});
+
 try {
   await showMode(m.smooth && params.get("view") !== "voxels" ? "smooth" : "voxels");
   if (clipNames.length) playClip($("clip").value);
@@ -229,12 +258,28 @@ try {
   fail(`The model could not be loaded: ${e.message}`);
 }
 
+// The sprite at the model's size: screen pixels per port unit at the camera's distance, and the feet (the model's
+// origin, y = 0) at the height the 3D view shows them.
+const feet = new THREE.Vector3();
+function drawSprite() {
+  const canvas = $("sprite");
+  const d = camera.position.distanceTo(controls.target);
+  const pxPerUnit = view.clientHeight / (2 * d * Math.tan((camera.fov * Math.PI) / 360));
+  feet.set(controls.target.x, 0, controls.target.z).project(camera);
+  const angle = Math.atan2(camera.position.x - controls.target.x, camera.position.z - controls.target.z);
+  sprite.draw(canvas, angle, pxPerUnit * canvas.clientHeight / view.clientHeight, (1 - feet.y) / 2);
+  $("frontOnly").hidden = !sprite.shown.frontOnly || sprite.still;
+  $("spriteView").textContent = sprite.viewName();
+}
+
 renderer.setAnimationLoop(() => {
   const dt = clock.getDelta();
   if (playing) {
     if (mixer && showing === "smooth") mixer.update(dt);
     if (voxels && showing === "voxels") voxels.step(dt);
+    if (sprite) sprite.step(dt);
   }
   controls.update();
   renderer.render(scene, camera);
+  if (sprite) drawSprite();
 });

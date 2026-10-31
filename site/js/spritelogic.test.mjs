@@ -7,8 +7,10 @@ const deg = d => (d * Math.PI) / 180;
 
 test("the camera in front sees the front view", () => assert.equal(viewFor(0), 4));
 test("the sides and the back", () => {
-  assert.equal(viewFor(-Math.PI / 2), 2);
-  assert.equal(viewFor(Math.PI / 2), 6);
+  // checked against the goblin, which holds its club in its right hand: from the model's left (+x, angle +90
+  // degrees) the club is hidden behind the body, and so it is in the sprite the game names "right" (view 2)
+  assert.equal(viewFor(Math.PI / 2), 2);
+  assert.equal(viewFor(-Math.PI / 2), 6);
   assert.equal(viewFor(Math.PI), 0);
   assert.equal(viewFor(-Math.PI), 0);
 });

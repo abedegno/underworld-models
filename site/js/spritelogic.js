@@ -8,9 +8,10 @@ const LOOPS = new Set(["idle", "idle_combat", "walking"]);   // crittermodel.cs 
 export const FPS = 8;   // one frame of a sequence each eighth of a second
 
 // The view seen from a camera at `angle` round the model: 0 in front of it (on its +z side, which the models
-// face), growing anticlockwise seen from above.
+// face), +90 degrees on its left (+x). The game's view numbers run the other way round: from the creature's left
+// it shows view 2, "right".
 export function viewFor(angle) {
-  return (((4 + Math.round(angle / STEP)) % 8) + 8) % 8;
+  return (((4 - Math.round(angle / STEP)) % 8) + 8) % 8;
 }
 
 // The animation the game shows for a clip from a view. Sequences below 0x20 other than death (idle_combat and the

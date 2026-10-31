@@ -110,3 +110,35 @@ def test_broken_variants_never_stop_the_build(repo, tmp_path):
     report = build.build(repo, out)
     assert len(report) == 3, report
     assert {m["id"] for m in models(out)} == {"OBJ090", "OBJ0c1", "CR00"}
+
+
+def with_sprites(repo):
+    import numpy as np
+    from uwmodels import spritesheet
+    from uwmodels.sprites import Frame
+    f = Frame(2, 2, 1, 2, np.ones((2, 2), np.uint8))
+    aux = np.stack([np.arange(32), np.arange(32)]).astype(np.uint8)
+    spritesheet.export(None, repo, pal=PAL, body_reader=lambda b: ({"idle_front": [0] + [-1] * 7}, aux, [f]),
+                       icons=[np.zeros((4, 4, 4), np.uint8)] * 256)
+
+
+def test_models_json_has_sprites(repo, tmp_path):
+    with_sprites(repo)
+    out = tmp_path / "out"
+    build.build(repo, out)
+    ms = {m["id"]: m for m in models(out)}
+    assert ms["CR00"]["sprite"] == {"json": "sprites/uw1/CR00.json"}
+    assert [c["aux"] for c in ms["CR00"]["colourings"]] == [0, 1]   # picks the colouring's sprite sheet
+    assert ms["OBJ090"]["sprite"] == {"image": "sprites/uw1/OBJ090.png", "scale": 0.02}
+    for m in ms.values():
+        s = m["sprite"]
+        assert (out / (s.get("json") or s["image"])).exists()
+
+
+def test_missing_sprite_is_null(repo, tmp_path):
+    with_sprites(repo)
+    (repo / "site/sprites/uw1/CR00.json").unlink()
+    out = tmp_path / "out"
+    assert build.build(repo, out) == []
+    ms = {m["id"]: m for m in models(out)}
+    assert ms["CR00"]["sprite"] is None and ms["OBJ090"]["sprite"] is not None

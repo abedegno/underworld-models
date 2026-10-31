@@ -39,10 +39,19 @@ def faithful(repo: Path, e: dict) -> dict:
         "smooth": f"models/uw1/editable/{mid}.glb" if smooth else None,
         "voxels": f"data/uw1/{mid}.uwvc",
         "clips": clips_of(glb, uwvc) if e["kind"] == "creature" else [],
-        "colourings": [{"name": c["name"], "texture": f"data/uw1/{mid}-{c['aux']}.png"} for c in e["colourings"]],
+        "colourings": [{"name": c["name"], "texture": f"data/uw1/{mid}-{c['aux']}.png", "aux": c["aux"]} for c in e["colourings"]],
         "download": source, "github": GITHUB + source,
         "howto": GITHUB + ("docs/blender.md" if source.endswith(".glb") else "docs/magicavoxel.md"),
+        "sprite": sprite(repo, e),
     }
+
+
+def sprite(repo: Path, e: dict):
+    """The original sprite's files for the page (site/sprites/uw1/), or None when they are missing."""
+    mid = e["id"]
+    if e["kind"] == "creature":
+        return {"json": f"sprites/uw1/{mid}.json"} if (repo / f"site/sprites/uw1/{mid}.json").exists() else None
+    return {"image": f"sprites/uw1/{mid}.png", "scale": 0.02} if (repo / f"site/sprites/uw1/{mid}.png").exists() else None
 
 
 def variants(repo: Path, known: dict, report: list) -> list:
