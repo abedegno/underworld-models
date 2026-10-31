@@ -1,0 +1,160 @@
+{
+ "cell": [
+  71,
+  56
+ ],
+ "anchor": [
+  19,
+  52
+ ],
+ "columns": 16,
+ "scale": 0.015,
+ "anims": {
+  "idle_combat": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "attack_bash": [
+   1,
+   0,
+   2,
+   3,
+   2
+  ],
+  "attack_slash": [
+   4,
+   0,
+   2,
+   3,
+   2
+  ],
+  "attack_stab": [
+   0,
+   2,
+   3,
+   2,
+   2
+  ],
+  "walking_towards": [
+   5,
+   6,
+   7,
+   8
+  ],
+  "death": [
+   9,
+   10,
+   11,
+   12
+  ],
+  "cast": [
+   1,
+   0,
+   13,
+   13,
+   0
+  ],
+  "idle_rear": [
+   14,
+   15,
+   16,
+   15
+  ],
+  "idle_rear_right": [
+   17,
+   18,
+   19,
+   18
+  ],
+  "idle_right": [
+   20,
+   21,
+   22,
+   21
+  ],
+  "idle_front_right": [
+   23,
+   24,
+   25,
+   24
+  ],
+  "idle_front": [
+   26,
+   27,
+   28,
+   27
+  ],
+  "idle_front_left": [
+   29,
+   30,
+   31,
+   30
+  ],
+  "idle_left": [
+   32,
+   33,
+   34,
+   33
+  ],
+  "idle_rear_left": [
+   35,
+   36,
+   37,
+   36
+  ],
+  "walking_rear": [
+   38,
+   39,
+   40,
+   15
+  ],
+  "walking_rear_right": [
+   41,
+   18,
+   42,
+   43
+  ],
+  "walking_right": [
+   44,
+   45,
+   21,
+   46
+  ],
+  "walking_front_right": [
+   47,
+   48,
+   24,
+   49
+  ],
+  "walking_front": [
+   50,
+   51,
+   52,
+   53
+  ],
+  "walking_front_left": [
+   54,
+   55,
+   30,
+   56
+  ],
+  "walking_left": [
+   33,
+   57,
+   58,
+   59
+  ],
+  "walking_rear_left": [
+   60,
+   61,
+   62,
+   36
+  ]
+ },
+ "colourings": {
+  "0": "CR25-0.png",
+  "1": "CR25-1.png"
+ }
+}

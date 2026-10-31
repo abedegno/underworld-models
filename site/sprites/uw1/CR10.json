@@ -1,0 +1,159 @@
+{
+ "cell": [
+  39,
+  51
+ ],
+ "anchor": [
+  19,
+  47
+ ],
+ "columns": 16,
+ "scale": 0.015,
+ "anims": {
+  "idle_combat": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "attack_bash": [
+   0,
+   1,
+   2,
+   3,
+   2
+  ],
+  "attack_slash": [
+   0,
+   1,
+   2,
+   3,
+   2
+  ],
+  "attack_stab": [
+   0,
+   1,
+   2,
+   3,
+   2
+  ],
+  "walking_towards": [
+   4,
+   5,
+   6,
+   7
+  ],
+  "death": [
+   8,
+   9,
+   10,
+   11
+  ],
+  "cast": [
+   0,
+   1,
+   2,
+   3,
+   2
+  ],
+  "idle_rear": [
+   12,
+   13,
+   14,
+   13
+  ],
+  "idle_rear_right": [
+   15,
+   16,
+   17,
+   16
+  ],
+  "idle_right": [
+   18,
+   19,
+   20,
+   19
+  ],
+  "idle_front_right": [
+   21,
+   22,
+   23,
+   22
+  ],
+  "idle_front": [
+   24,
+   25,
+   26,
+   25
+  ],
+  "idle_front_left": [
+   27,
+   28,
+   29,
+   28
+  ],
+  "idle_left": [
+   30,
+   31,
+   32,
+   31
+  ],
+  "idle_rear_left": [
+   33,
+   34,
+   35,
+   34
+  ],
+  "walking_rear": [
+   36,
+   37,
+   38,
+   13
+  ],
+  "walking_rear_right": [
+   39,
+   40,
+   41,
+   16
+  ],
+  "walking_right": [
+   42,
+   43,
+   19,
+   44
+  ],
+  "walking_front_right": [
+   22,
+   45,
+   46,
+   47
+  ],
+  "walking_front": [
+   48,
+   49,
+   50,
+   51
+  ],
+  "walking_front_left": [
+   28,
+   52,
+   53,
+   54
+  ],
+  "walking_left": [
+   55,
+   56,
+   31,
+   57
+  ],
+  "walking_rear_left": [
+   58,
+   59,
+   60,
+   34
+  ]
+ },
+ "colourings": {
+  "0": "CR10-0.png"
+ }
+}
