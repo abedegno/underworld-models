@@ -76,3 +76,10 @@ def test_flags_tiny_image_of_any_format(tmp_path):
     q = tmp_path / "sprites/obj.dat2"   # an image whatever its name
     Image.fromarray(np.zeros((16, 16, 3), np.uint8)).save(q, "BMP")
     assert len(problems(tmp_path)) == 2
+
+
+def test_small_pictures_allowed_only_in_site_sprites(tmp_path):
+    png(tmp_path, "site/sprites/uw1/OBJ090.png", 16, 16)
+    assert problems(tmp_path) == []
+    png(tmp_path, "site/thumbs/uw1/OBJ090.png", 16, 16)
+    assert len(problems(tmp_path)) == 1

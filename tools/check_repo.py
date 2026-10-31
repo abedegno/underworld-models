@@ -47,7 +47,7 @@ def problems(root: Path) -> list[str]:
                 if name.endswith(".png"):
                     found.append(f"{rel}: not a readable PNG")
                 continue
-            if w <= ICON_SIDE and h <= ICON_SIDE:
+            if w <= ICON_SIDE and h <= ICON_SIDE and rel.parts[:2] != ("site", "sprites"):   # sprites go there only
                 found.append(f"{rel}: {w}x{h} picture, small enough to be a sprite or icon export")
     return found
 

@@ -12,6 +12,7 @@ The repo holds 26 creature bodies with their animations and 185 floor object mod
 - `models/uw1/voxels/` has the objects' voxel models, for editing in MagicaVoxel.
 - `port/uw1/` has the files the UnderworldGodot port loads (see [docs/port.md](docs/port.md)).
 - `variants/uw1/` is for more detailed or reimagined versions (see below).
+- `site/sprites/uw1/` has the original sprites: every view and animation frame of each creature, in each creature's colours, and each object's icon. The site shows them beside the models (see the licence section).
 - `shots/uw1/` has a picture of each original sprite, taken in the game, to judge the models against.
 - `tools/` has the scripts that turn the editable models into port files and back.
 - `site/` is the website.
@@ -32,7 +33,9 @@ The project's own work in this repo is licensed under the Creative Commons Attri
 
 The licence covers only this project's own work. Ultima Underworld, its creatures, objects and artwork belong to their owners, and the models copy the designs and colours of the game's sprites. Nothing here grants any right to those designs. This is a fan project, and it is not connected with or approved by the owners of Ultima Underworld.
 
-The repo holds no files from the game, and nothing extracted from them. The tools read the game's colours from your own copy of the game when you run them, and never copy them into the repo.
+The original sprites in `site/sprites/` are the game's own artwork, and the licence does not cover them. They are shown only so that people can compare the models with the original (see [site/sprites/NOTICE.md](site/sprites/NOTICE.md)).
+
+The repo holds no files from the game. The tools read the game's colours and sprites from your own copy of the game when you run them, and never copy the game's files into the repo.
 
 ## How the models were made
 
