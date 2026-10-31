@@ -1,0 +1,2129 @@
+[
+ {
+  "id": "CR00",
+  "name": "goblin",
+  "variant_of": null,
+  "kind": "creature",
+  "master": "smooth",
+  "colourings": [
+   {
+    "aux": 0,
+    "name": "goblin, green 1"
+   },
+   {
+    "aux": 1,
+    "name": "goblin, grey 1"
+   },
+   {
+    "aux": 2,
+    "name": "goblin, green 2"
+   },
+   {
+    "aux": 3,
+    "name": "goblin, grey 2"
+   }
+  ]
+ },
+ {
+  "id": "CR01",
+  "name": "skeleton warrior",
+  "variant_of": null,
+  "kind": "creature",
+  "master": "smooth",
+  "colourings": [
+   {
+    "aux": 0,
+    "name": "skeleton warrior"
+   }
+  ]
+ },
+ {
+  "id": "CR02",
+  "name": "lizardman",
+  "variant_of": null,
+  "kind": "creature",
+  "master": "smooth",
+  "colourings": [
+   {
+    "aux": 0,
+    "name": "lizardman, green"
+   },
+   {
+    "aux": 1,
+    "name": "lizardman, red"
+   },
+   {
+    "aux": 2,
+    "name": "lizardman, grey"
+   }
+  ]
+ },
+ {
+  "id": "CR03",
+  "name": "cave bat",
+  "variant_of": null,
+  "kind": "creature",
+  "master": "smooth",
+  "colourings": [
+   {
+    "aux": 0,
+    "name": "cave bat, grey"
+   },
+   {
+    "aux": 1,
+    "name": "cave bat, red"
+   }
+  ]
+ },
+ {
+  "id": "CR04",
+  "name": "mage in a yellow robe",
+  "variant_of": null,
+  "kind": "creature",
+  "master": "smooth",
+  "colourings": [
+   {
+    "aux": 0,
+    "name": "mage in a yellow robe, orange 1"
+   },
+   {
+    "aux": 1,
+    "name": "mage in a yellow robe, red"
+   },
+   {
+    "aux": 2,
+    "name": "mage in a yellow robe, orange 2"
+   }
+  ]
+ },
+ {
+  "id": "CR05",
+  "name": "giant spider",
+  "variant_of": null,
+  "kind": "creature",
+  "master": "smooth",
+  "colourings": [
+   {
+    "aux": 0,
+    "name": "giant spider, grey 1"
+   },
+   {
+    "aux": 1,
+    "name": "giant spider, red"
+   },
+   {
+    "aux": 2,
+    "name": "giant spider, grey 2"
+   }
+  ]
+ },
+ {
+  "id": "CR06",
+  "name": "gazer, a floating eye",
+  "variant_of": null,
+  "kind": "creature",
+  "master": "smooth",
+  "colourings": [
+   {
+    "aux": 0,
+    "name": "gazer, a floating eye"
+   }
+  ]
+ },
+ {
+  "id": "CR07",
+  "name": "troll",
+  "variant_of": null,
+  "kind": "creature",
+  "master": "smooth",
+  "colourings": [
+   {
+    "aux": 0,
+    "name": "troll, orange 1"
+   },
+   {
+    "aux": 1,
+    "name": "troll, orange 2"
+   },
+   {
+    "aux": 2,
+    "name": "troll, red"
+   }
+  ]
+ },
+ {
+  "id": "CR10",
+  "name": "woman mage in a blue robe",
+  "variant_of": null,
+  "kind": "creature",
+  "master": "smooth",
+  "colourings": [
+   {
+    "aux": 0,
+    "name": "woman mage in a blue robe"
+   }
+  ]
+ },
+ {
+  "id": "CR11",
+  "name": "flesh slug",
+  "variant_of": null,
+  "kind": "creature",
+  "master": "smooth",
+  "colourings": [
+   {
+    "aux": 0,
+    "name": "flesh slug, red"
+   },
+   {
+    "aux": 1,
+    "name": "flesh slug, green"
+   }
+  ]
+ },
+ {
+  "id": "CR13",
+  "name": "ghoul",
+  "variant_of": null,
+  "kind": "creature",
+  "master": "smooth",
+  "colourings": [
+   {
+    "aux": 0,
+    "name": "ghoul, yellow"
+   },
+   {
+    "aux": 1,
+    "name": "ghoul, orange"
+   },
+   {
+    "aux": 2,
+    "name": "ghoul, red"
+   }
+  ]
+ },
+ {
+  "id": "CR14",
+  "name": "horned demon",
+  "variant_of": null,
+  "kind": "creature",
+  "master": "smooth",
+  "colourings": [
+   {
+    "aux": 0,
+    "name": "horned demon"
+   }
+  ]
+ },
+ {
+  "id": "CR15",
+  "name": "ghost",
+  "variant_of": null,
+  "kind": "creature",
+  "master": "smooth",
+  "colourings": [
+   {
+    "aux": 0,
+    "name": "ghost, red"
+   },
+   {
+    "aux": 1,
+    "name": "ghost, grey"
+   },
+   {
+    "aux": 2,
+    "name": "ghost, blue 1"
+   },
+   {
+    "aux": 3,
+    "name": "ghost, blue 2"
+   }
+  ]
+ },
+ {
+  "id": "CR16",
+  "name": "goblin in a breastplate",
+  "variant_of": null,
+  "kind": "creature",
+  "master": "smooth",
+  "colourings": [
+   {
+    "aux": 0,
+    "name": "goblin in a breastplate, green"
+   },
+   {
+    "aux": 1,
+    "name": "goblin in a breastplate, grey"
+   }
+  ]
+ },
+ {
+  "id": "CR17",
+  "name": "reaper, a living dead tree",
+  "variant_of": null,
+  "kind": "creature",
+  "master": "smooth",
+  "colourings": [
+   {
+    "aux": 0,
+    "name": "reaper, a living dead tree"
+   }
+  ]
+ },
+ {
+  "id": "CR20",
+  "name": "giant rat",
+  "variant_of": null,
+  "kind": "creature",
+  "master": "smooth",
+  "colourings": [
+   {
+    "aux": 0,
+    "name": "giant rat, orange"
+   },
+   {
+    "aux": 1,
+    "name": "giant rat, grey"
+   }
+  ]
+ },
+ {
+  "id": "CR21",
+  "name": "woman fighter",
+  "variant_of": null,
+  "kind": "creature",
+  "master": "smooth",
+  "colourings": [
+   {
+    "aux": 0,
+    "name": "woman fighter, orange 1"
+   },
+   {
+    "aux": 1,
+    "name": "woman fighter, orange 2"
+   }
+  ]
+ },
+ {
+  "id": "CR22",
+  "name": "imp",
+  "variant_of": null,
+  "kind": "creature",
+  "master": "smooth",
+  "colourings": [
+   {
+    "aux": 0,
+    "name": "imp, green"
+   },
+   {
+    "aux": 1,
+    "name": "imp, orange"
+   }
+  ]
+ },
+ {
+  "id": "CR23",
+  "name": "earth golem",
+  "variant_of": null,
+  "kind": "creature",
+  "master": "smooth",
+  "colourings": [
+   {
+    "aux": 0,
+    "name": "earth golem, orange 1"
+   },
+   {
+    "aux": 1,
+    "name": "earth golem, grey"
+   },
+   {
+    "aux": 2,
+    "name": "earth golem, orange 2"
+   }
+  ]
+ },
+ {
+  "id": "CR24",
+  "name": "headless",
+  "variant_of": null,
+  "kind": "creature",
+  "master": "smooth",
+  "colourings": [
+   {
+    "aux": 0,
+    "name": "headless"
+   }
+  ]
+ },
+ {
+  "id": "CR25",
+  "name": "mage in a blue robe with a staff",
+  "variant_of": null,
+  "kind": "creature",
+  "master": "smooth",
+  "colourings": [
+   {
+    "aux": 0,
+    "name": "mage in a blue robe with a staff, blue"
+   },
+   {
+    "aux": 1,
+    "name": "mage in a blue robe with a staff, red"
+   }
+  ]
+ },
+ {
+  "id": "CR26",
+  "name": "rotworm",
+  "variant_of": null,
+  "kind": "creature",
+  "master": "smooth",
+  "colourings": [
+   {
+    "aux": 0,
+    "name": "rotworm, orange"
+   },
+   {
+    "aux": 1,
+    "name": "rotworm, green"
+   }
+  ]
+ },
+ {
+  "id": "CR31",
+  "name": "lurker",
+  "variant_of": null,
+  "kind": "creature",
+  "master": "smooth",
+  "colourings": [
+   {
+    "aux": 0,
+    "name": "lurker, yellow"
+   },
+   {
+    "aux": 1,
+    "name": "lurker, green"
+   }
+  ]
+ },
+ {
+  "id": "CR32",
+  "name": "human fighter",
+  "variant_of": null,
+  "kind": "creature",
+  "master": "smooth",
+  "colourings": [
+   {
+    "aux": 0,
+    "name": "human fighter, orange"
+   },
+   {
+    "aux": 1,
+    "name": "human fighter, red"
+   },
+   {
+    "aux": 2,
+    "name": "human fighter, green 1"
+   },
+   {
+    "aux": 3,
+    "name": "human fighter, green 2"
+   }
+  ]
+ },
+ {
+  "id": "CR33",
+  "name": "dwarf warrior",
+  "variant_of": null,
+  "kind": "creature",
+  "master": "smooth",
+  "colourings": [
+   {
+    "aux": 0,
+    "name": "dwarf warrior, orange 1"
+   },
+   {
+    "aux": 1,
+    "name": "dwarf warrior, orange 2"
+   }
+  ]
+ },
+ {
+  "id": "CR35",
+  "name": "mage in a red robe",
+  "variant_of": null,
+  "kind": "creature",
+  "master": "smooth",
+  "colourings": [
+   {
+    "aux": 0,
+    "name": "mage in a red robe"
+   }
+  ]
+ },
+ {
+  "id": "OBJ000",
+  "name": "axe",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "5a029fbfcc29cf191c4ec0d56b52e0f67a9f2c8e"
+ },
+ {
+  "id": "OBJ001",
+  "name": "battle axe",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "c354a4f4c23a4885b77958b9abe9a1fabb8aceac"
+ },
+ {
+  "id": "OBJ002",
+  "name": "axe",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "6dc2eb633b1f86e034e500f1bca3b783e82f1d80"
+ },
+ {
+  "id": "OBJ003",
+  "name": "dagger",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "69f418166f2e3a05a4f75427560d3edbe79fdbfd"
+ },
+ {
+  "id": "OBJ004",
+  "name": "sword",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "fa5dfe47b91134b217693310842eaf74d451ee1b"
+ },
+ {
+  "id": "OBJ005",
+  "name": "long sword",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "cab9526c678f2542dbd4569c27d816f75db67b93"
+ },
+ {
+  "id": "OBJ006",
+  "name": "sword",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "c107789bff9677ca4c1a078f11a9e54719bc314b"
+ },
+ {
+  "id": "OBJ007",
+  "name": "mace",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "70cd275e22ef0a6e525e89d0d11ef1bd90c852dd"
+ },
+ {
+  "id": "OBJ008",
+  "name": "light mace",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "8bd73b51cf30ae9c0ce425d7d3ebe100e7fd6f45"
+ },
+ {
+  "id": "OBJ009",
+  "name": "mace",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "cd48b5e52c76ef0f7b1184b984f57ebbcb832590"
+ },
+ {
+  "id": "OBJ00b",
+  "name": "axe",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "6b08eee44dfc010c6e8f12c7ed166379106d2482"
+ },
+ {
+  "id": "OBJ00c",
+  "name": "sword",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "44becf085d4ff3715fa70a0fd548a0937121afc7"
+ },
+ {
+  "id": "OBJ00d",
+  "name": "sword",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "22345bf8011bbec52069aee9e1caa07a2f8df5ac"
+ },
+ {
+  "id": "OBJ00e",
+  "name": "mace",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "bed2ce411cd33718a58a73886b2ed8af76bc061a"
+ },
+ {
+  "id": "OBJ010",
+  "name": "small thing, a few pixels",
+  "variant_of": null,
+  "kind": "item",
+  "master": "voxel",
+  "colourings": [],
+  "voxel_sha1": "56b40da31eafa0770aaa4937ed341c99c2e3a5ea"
+ },
+ {
+  "id": "OBJ018",
+  "name": "chain, cord or necklace lying flat",
+  "variant_of": null,
+  "kind": "item",
+  "master": "voxel",
+  "colourings": [],
+  "voxel_sha1": "68099451cff43f9ed421b02ad840670dec2f233e"
+ },
+ {
+  "id": "OBJ019",
+  "name": "bow",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "ba0159da4ebd0290ab339878389b663612f5800e"
+ },
+ {
+  "id": "OBJ01a",
+  "name": "crossbow",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "f56bb80bc5c7538b9ea09a0612db80eebee30d9f"
+ },
+ {
+  "id": "OBJ01f",
+  "name": "bow",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "676ac70c3a999bd4a14a2aa616b6cf1d30ceed4a"
+ },
+ {
+  "id": "OBJ020",
+  "name": "leather vest",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "e5f92a2a7cd00b6e462172b26f20c8fcab40a1c9"
+ },
+ {
+  "id": "OBJ021",
+  "name": "mail shirt",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "0918702f37010d3fedde906bd6d721b4e2b772eb"
+ },
+ {
+  "id": "OBJ022",
+  "name": "breastplate",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "d1a0066cd6ded794c56697dce39493acf4817c10"
+ },
+ {
+  "id": "OBJ023",
+  "name": "leather leggings",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "8bec9651e452816075a877a0176e079240e01955"
+ },
+ {
+  "id": "OBJ024",
+  "name": "mail leggings",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "552d14a83e90dc98ea80089244b4302ad9198b26"
+ },
+ {
+  "id": "OBJ025",
+  "name": "plate leggings",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "6a749b95ce9fa0981cc15e0ad27d0655ee8ba442"
+ },
+ {
+  "id": "OBJ026",
+  "name": "leather gloves",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "0048a0658b628c5d0604955b13168516128e1682"
+ },
+ {
+  "id": "OBJ027",
+  "name": "chain gauntlets",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "9b83152cc6b3da9d5c08095e13820e4ff4bbf3ba"
+ },
+ {
+  "id": "OBJ028",
+  "name": "gauntlets",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "821c9885462444cf39840680b7a39e8ada308e4c"
+ },
+ {
+  "id": "OBJ029",
+  "name": "leather boots",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "b0a98d5e566fa760aa421c950e5bd5ce36fb9071"
+ },
+ {
+  "id": "OBJ02a",
+  "name": "boots",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "f37a656ce3188e1f3f5c49be756af23360c199bf"
+ },
+ {
+  "id": "OBJ02b",
+  "name": "boots",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "496c119eb97ef780e4fdfa86b1532d01ae59d176"
+ },
+ {
+  "id": "OBJ02c",
+  "name": "leather cap",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "792bd9dd30aa186cc846269005460e1b23872356"
+ },
+ {
+  "id": "OBJ02d",
+  "name": "chain cowl",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "a9b44915facb26641e90f94ca306ccf802f09335"
+ },
+ {
+  "id": "OBJ02e",
+  "name": "helmet",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "8877745fcc8d87ac5c23f20e98116e0bb0646f2f"
+ },
+ {
+  "id": "OBJ030",
+  "name": "crown",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "eaae157bc88940081d08e762b2961e471cedce19"
+ },
+ {
+  "id": "OBJ031",
+  "name": "crown",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "e555d03557a02553c35dff1691c40b6bafd1f711"
+ },
+ {
+  "id": "OBJ032",
+  "name": "crown",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "ae8a44bfda5b5a82acc3a839f4be5d2a7636867d"
+ },
+ {
+  "id": "OBJ036",
+  "name": "small ring",
+  "variant_of": null,
+  "kind": "item",
+  "master": "voxel",
+  "colourings": [],
+  "voxel_sha1": "74c21a8c6d8fc9909fe1a67c7bd11a7c7f520d93"
+ },
+ {
+  "id": "OBJ037",
+  "name": "heater shield",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "b52518341eee058023c353157f0d3797b94ff253"
+ },
+ {
+  "id": "OBJ038",
+  "name": "small ring",
+  "variant_of": null,
+  "kind": "item",
+  "master": "voxel",
+  "colourings": [],
+  "voxel_sha1": "0e2f26f67300a97a28ad3e601932d92586c53179"
+ },
+ {
+  "id": "OBJ039",
+  "name": "small thing, a few pixels",
+  "variant_of": null,
+  "kind": "item",
+  "master": "voxel",
+  "colourings": [],
+  "voxel_sha1": "74c21a8c6d8fc9909fe1a67c7bd11a7c7f520d93"
+ },
+ {
+  "id": "OBJ03a",
+  "name": "small ring",
+  "variant_of": null,
+  "kind": "item",
+  "master": "voxel",
+  "colourings": [],
+  "voxel_sha1": "9eb5e80ffff62798279664fd16135eae25cf6e43"
+ },
+ {
+  "id": "OBJ03b",
+  "name": "heater shield",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "24b2cb53e2add18ce3a641ad89a57e308c9e9895"
+ },
+ {
+  "id": "OBJ03c",
+  "name": "wooden heater shield",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "fd3974d3a75ee6999430ea698b85534bcbaecfcf"
+ },
+ {
+  "id": "OBJ03d",
+  "name": "round shield",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "df4296e58ec3cea5d8a84066d3e294ae6da91c6b"
+ },
+ {
+  "id": "OBJ03e",
+  "name": "buckler",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "a7982674320e4ed08b58838fdf8fd197a8d07ff4"
+ },
+ {
+  "id": "OBJ03f",
+  "name": "heater shield",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "ad46c649fa7eddec2038a63cbcaef990642c36d9"
+ },
+ {
+  "id": "OBJ080",
+  "name": "sack",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "24d6f3a48f625f7f37662760d4e5c15c9d8f202a"
+ },
+ {
+  "id": "OBJ082",
+  "name": "pack",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "de8ce913b8305f6b27f14a556b6cff1709a399c9"
+ },
+ {
+  "id": "OBJ084",
+  "name": "box",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "85a46f85c5889b43fa43c61374b09a9bf2703fc2"
+ },
+ {
+  "id": "OBJ086",
+  "name": "pouch",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "ad6e57912ad577e75b3d42e23f79ef8c16f7cef6"
+ },
+ {
+  "id": "OBJ088",
+  "name": "map case",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "4a0f7ce5bedc2a233374af8aa8d0940797e4ac6a"
+ },
+ {
+  "id": "OBJ08a",
+  "name": "gold chest",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "3b3e63e422ed4eb8b5ea16adbfb19b6a92cab156"
+ },
+ {
+  "id": "OBJ08c",
+  "name": "urn",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "713c5c922d3403e96a393911a42a3d1be1daab0d"
+ },
+ {
+  "id": "OBJ08d",
+  "name": "quiver",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "29e1ac23d1f7b0004eb880b6aee54384a855e433"
+ },
+ {
+  "id": "OBJ08e",
+  "name": "bowl",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "c009c38248385caacdc091051fc150530a58997b"
+ },
+ {
+  "id": "OBJ08f",
+  "name": "sack",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "8dd12630b9d0e6166d4e3b1d05fd885027522cfb"
+ },
+ {
+  "id": "OBJ090",
+  "name": "lantern",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "83139c7ef0f14a84ea958468d973d38e30dd3d26"
+ },
+ {
+  "id": "OBJ091",
+  "name": "torch",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "c8af1f93a1d5c929a374425c985adc9c0fadcecb"
+ },
+ {
+  "id": "OBJ092",
+  "name": "small thing, a few pixels",
+  "variant_of": null,
+  "kind": "item",
+  "master": "voxel",
+  "colourings": [],
+  "voxel_sha1": "f089c829324a03484336ff1890b3fed26153dda9"
+ },
+ {
+  "id": "OBJ093",
+  "name": "candle",
+  "variant_of": null,
+  "kind": "item",
+  "master": "voxel",
+  "colourings": [],
+  "voxel_sha1": "b85b1edf8bd0a5bd84dde608dfcdb55ccbe989cc"
+ },
+ {
+  "id": "OBJ098",
+  "name": "wand",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "fec688236264105a20abdf5b95103e8512c7842f"
+ },
+ {
+  "id": "OBJ099",
+  "name": "wand",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "56159f09b5e1927b50da14a39855a744843afe26"
+ },
+ {
+  "id": "OBJ09a",
+  "name": "wand",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "986eb98626d803ca830bf492f832e5d4fa1a3965"
+ },
+ {
+  "id": "OBJ09b",
+  "name": "wand",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "2b7aa7e31aa8a881ae046e67dbded9c88d36e564"
+ },
+ {
+  "id": "OBJ09d",
+  "name": "broken wand",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "f93cbff68ea1967ad0bea68fed116695c289810b"
+ },
+ {
+  "id": "OBJ09f",
+  "name": "curved rod",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "b074833c63cda1076263e1001fead300a4955b42"
+ },
+ {
+  "id": "OBJ0a0",
+  "name": "pile of gold coins",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "0245084045759a1bb8ee0b1fcfe99c2d8a75e4b0"
+ },
+ {
+  "id": "OBJ0a1",
+  "name": "small thing, a few pixels",
+  "variant_of": null,
+  "kind": "item",
+  "master": "voxel",
+  "colourings": [],
+  "voxel_sha1": "e1ed92deebcce6877957a65228c2ec87fee11106"
+ },
+ {
+  "id": "OBJ0a2",
+  "name": "cut gem",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "83198f196f9f7051d811967269eb4dd58a6807e8"
+ },
+ {
+  "id": "OBJ0a3",
+  "name": "cut gem",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "e5fd324ebf247a07e0d726575555387979d699cb"
+ },
+ {
+  "id": "OBJ0a4",
+  "name": "cut gem",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "583382c94acd8419a6bcd945120f66a7e207f6ac"
+ },
+ {
+  "id": "OBJ0a5",
+  "name": "cut gem",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "60ffe54283bef12395d1fb28aaa5eedf9c131f55"
+ },
+ {
+  "id": "OBJ0a6",
+  "name": "cut gem",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "7d9f35757b23ec33f8284ade18075c29cffe7e4c"
+ },
+ {
+  "id": "OBJ0a7",
+  "name": "emerald",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "281727e0db5fb9173571f66dfb0bc9458bb4f72e"
+ },
+ {
+  "id": "OBJ0a8",
+  "name": "chain, cord or necklace lying flat",
+  "variant_of": null,
+  "kind": "item",
+  "master": "voxel",
+  "colourings": [],
+  "voxel_sha1": "1ea59127744a98523f2341a245196cbe351a8d62"
+ },
+ {
+  "id": "OBJ0a9",
+  "name": "goblet",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "40c44aa1efb316270c5684d2f5a0ff014abd292c"
+ },
+ {
+  "id": "OBJ0aa",
+  "name": "sceptre",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "2b461347bedb18b960df7ea6a04442e9f20bb2bd"
+ },
+ {
+  "id": "OBJ0ab",
+  "name": "chain, cord or necklace lying flat",
+  "variant_of": null,
+  "kind": "item",
+  "master": "voxel",
+  "colourings": [],
+  "voxel_sha1": "13a8fc02866318abec0faad579c13a8d685b0bb4"
+ },
+ {
+  "id": "OBJ0ac",
+  "name": "gold plate",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "d335476ce2571389d8cf183ed75d36a199a69775"
+ },
+ {
+  "id": "OBJ0ad",
+  "name": "chain, cord or necklace lying flat",
+  "variant_of": null,
+  "kind": "item",
+  "master": "voxel",
+  "colourings": [],
+  "voxel_sha1": "022fd82993bb28fb2782f7315f96f6b18640771a"
+ },
+ {
+  "id": "OBJ0b0",
+  "name": "piece of meat",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "3999f5aaa4969da366011f15e79c4c44a3b0a7c7"
+ },
+ {
+  "id": "OBJ0b1",
+  "name": "loaf of bread",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "f1f70ce979e44a87cd1fb3376974a5080df54a34"
+ },
+ {
+  "id": "OBJ0b2",
+  "name": "piece of cheese",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "51cde9b02f2e8953382262c8de17be71dd3bf065"
+ },
+ {
+  "id": "OBJ0b3",
+  "name": "apple",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "244ced1a1e29b2b5936f3861be4ad494d996853d"
+ },
+ {
+  "id": "OBJ0b4",
+  "name": "ear of corn",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "4705ecc55a9926934f55580e2c7c0314e8020259"
+ },
+ {
+  "id": "OBJ0b5",
+  "name": "loaf of bread",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "e738eec24b6f70b1fec200f559e0421ca85cca7a"
+ },
+ {
+  "id": "OBJ0b6",
+  "name": "fish",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "bbbd034b78d608ef5cbcafaeea78841ebe4c3507"
+ },
+ {
+  "id": "OBJ0b8",
+  "name": "mushroom",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "024ddcad4db19d3a108b6de1fcd956c74c852652"
+ },
+ {
+  "id": "OBJ0b9",
+  "name": "grey toadstool",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "24a95bc5997307b6efdd5e4e6b1db0ba77a14941"
+ },
+ {
+  "id": "OBJ0ba",
+  "name": "bottle",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "7206e9e20dfa31b211f6428c1e2550ae9f2343f5"
+ },
+ {
+  "id": "OBJ0bb",
+  "name": "red flask",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "a17479d5817605182208965ae2d379e749469920"
+ },
+ {
+  "id": "OBJ0bc",
+  "name": "green potion",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "a1826c6f76d5088d7df9ece7d254a6ceebab1936"
+ },
+ {
+  "id": "OBJ0bd",
+  "name": "bottle of water",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "ea1ba53256a00f6e9850f11b2a6563a3d2ac6c1d"
+ },
+ {
+  "id": "OBJ0be",
+  "name": "bottle",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "0c7f4a58ba7357759fe814f1a024628889fbd249"
+ },
+ {
+  "id": "OBJ0bf",
+  "name": "bottle",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "34e63309099e16e8e4ad93c41ba577abb387a64e"
+ },
+ {
+  "id": "OBJ0c0",
+  "name": "grass or plant tufts",
+  "variant_of": null,
+  "kind": "item",
+  "master": "voxel",
+  "colourings": [],
+  "voxel_sha1": "d8138d5cf01a789b064100703a75d4725f45a933"
+ },
+ {
+  "id": "OBJ0c1",
+  "name": "grass or plant tufts",
+  "variant_of": null,
+  "kind": "item",
+  "master": "voxel",
+  "colourings": [],
+  "voxel_sha1": "040e3e197d2dfac3a4205f775da95852c6238621"
+ },
+ {
+  "id": "OBJ0c2",
+  "name": "skull, side",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "16f10ee32a027f692546c644f45071b1c2628015"
+ },
+ {
+  "id": "OBJ0c3",
+  "name": "skull, front",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "5f08fbc446ee68a593ec25d21a41e826bcb1db89"
+ },
+ {
+  "id": "OBJ0c4",
+  "name": "bone",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "9fb3d491c032b359041a28150109a57b75ad94d2"
+ },
+ {
+  "id": "OBJ0c5",
+  "name": "small bone",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "907ae109ff834d381ea79aab33c8a073e9fecded"
+ },
+ {
+  "id": "OBJ0c6",
+  "name": "pile of bones",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "209a6ed0c1d9ad47389f56ac7eb9405ed4c42023"
+ },
+ {
+  "id": "OBJ0c8",
+  "name": "broken axe",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "b6a253a6274707eb8ed41511a5b0b107e3234c85"
+ },
+ {
+  "id": "OBJ0c9",
+  "name": "broken sword",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "a13ab0c14578b6898cc9896b36cbbd8e0d1ed845"
+ },
+ {
+  "id": "OBJ0ca",
+  "name": "broken mace",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "ddff4e373ab0ddce73b303cd10224accfbbbebf8"
+ },
+ {
+  "id": "OBJ0cb",
+  "name": "broken shield",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "42feec35945f97c395366d62ab5692e22730afe3"
+ },
+ {
+  "id": "OBJ0cc",
+  "name": "wooden stick",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "8f5f5378f8733cdbbf74713a86e9353f9074b12b"
+ },
+ {
+  "id": "OBJ0cd",
+  "name": "piece of wood",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "c3a7c194273340530f3c27a31ba5a6307709c110"
+ },
+ {
+  "id": "OBJ0ce",
+  "name": "grass or plant tufts",
+  "variant_of": null,
+  "kind": "item",
+  "master": "voxel",
+  "colourings": [],
+  "voxel_sha1": "97d68414147c9b0ee74e2920f53db0f9dfa96d91"
+ },
+ {
+  "id": "OBJ0cf",
+  "name": "grass or plant tufts",
+  "variant_of": null,
+  "kind": "item",
+  "master": "voxel",
+  "colourings": [],
+  "voxel_sha1": "5d9700c7580c4e6946b9e0d795a4400f7d518cad"
+ },
+ {
+  "id": "OBJ0d0",
+  "name": "rubble heap",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "9afcf88dc40d4e625a371e70ec2bda3573888d64"
+ },
+ {
+  "id": "OBJ0d1",
+  "name": "pile of debris",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "2fbe82eb32ffb1437e10a8f81dfa48afbc0dc1dc"
+ },
+ {
+  "id": "OBJ0d2",
+  "name": "pile of debris",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "712fbf11c8c71fb7299e86c224f8461120a751c1"
+ },
+ {
+  "id": "OBJ0d3",
+  "name": "stalactite",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "d863bd5a82a998e6267c950621ec0665cbb08782"
+ },
+ {
+  "id": "OBJ0d4",
+  "name": "grass or plant tufts",
+  "variant_of": null,
+  "kind": "item",
+  "master": "voxel",
+  "colourings": [],
+  "voxel_sha1": "afaabfe2276bd352d40538ee3aa259cbe180f267"
+ },
+ {
+  "id": "OBJ0d5",
+  "name": "stain or puddle on the floor",
+  "variant_of": null,
+  "kind": "item",
+  "master": "voxel",
+  "colourings": [],
+  "voxel_sha1": "f49f830448d4d2be729273921ce3bc6740892b7e"
+ },
+ {
+  "id": "OBJ0d6",
+  "name": "rubble heap",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "02bae2e2c034faf678a4908adf0cb99a15b0a504"
+ },
+ {
+  "id": "OBJ0d7",
+  "name": "anvil",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "b63552af058b890667693c0138cd6a8693b810ee"
+ },
+ {
+  "id": "OBJ0d8",
+  "name": "pole",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "0cc40ec7922c0a2afc9771d7a28a3634cb9dda53"
+ },
+ {
+  "id": "OBJ0d9",
+  "name": "stain or puddle on the floor",
+  "variant_of": null,
+  "kind": "item",
+  "master": "voxel",
+  "colourings": [],
+  "voxel_sha1": "1bbe5dbd7c40cdda16847430232e150648705490"
+ },
+ {
+  "id": "OBJ0da",
+  "name": "heap of rubble",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "ae3cd222f1d04bf9d3617aaa050fceecff13f07f"
+ },
+ {
+  "id": "OBJ0db",
+  "name": "scattered bits on the floor",
+  "variant_of": null,
+  "kind": "item",
+  "master": "voxel",
+  "colourings": [],
+  "voxel_sha1": "09fb853b18735fc96d517f7cd79795b170a91ce5"
+ },
+ {
+  "id": "OBJ0dc",
+  "name": "scattered bits on the floor",
+  "variant_of": null,
+  "kind": "item",
+  "master": "voxel",
+  "colourings": [],
+  "voxel_sha1": "abe5ed22a2e86f99c7457855c3d2b8eb51f24ca0"
+ },
+ {
+  "id": "OBJ0dd",
+  "name": "stain or puddle on the floor",
+  "variant_of": null,
+  "kind": "item",
+  "master": "voxel",
+  "colourings": [],
+  "voxel_sha1": "2222c754e15fa43ffa7d65e9c0219b00b0195c8c"
+ },
+ {
+  "id": "OBJ0de",
+  "name": "stain or puddle on the floor",
+  "variant_of": null,
+  "kind": "item",
+  "master": "voxel",
+  "colourings": [],
+  "voxel_sha1": "0dd95ba523f451159bf3412d1c4971200ced09b3"
+ },
+ {
+  "id": "OBJ0df",
+  "name": "stain or puddle on the floor",
+  "variant_of": null,
+  "kind": "item",
+  "master": "voxel",
+  "colourings": [],
+  "voxel_sha1": "0dd95ba523f451159bf3412d1c4971200ced09b3"
+ },
+ {
+  "id": "OBJ0e0",
+  "name": "runestone",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "916b93ce39451fe5a08a7f6000e39f68dd684f70"
+ },
+ {
+  "id": "OBJ100",
+  "name": "key",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "90497b228e0770038ccac13e024a35bed9b92576"
+ },
+ {
+  "id": "OBJ101",
+  "name": "key",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "7f8c656029079bb1cb6a1ad2aa9c6acabc65db2b"
+ },
+ {
+  "id": "OBJ102",
+  "name": "key",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "2ea6db391ffadf6d1e7a7309a8ec5060da2af173"
+ },
+ {
+  "id": "OBJ103",
+  "name": "key",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "a2b91f6cdd834c63d643c6ef73091e7b490bd1bc"
+ },
+ {
+  "id": "OBJ104",
+  "name": "key",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "919b8d199cf3c58c46b662e9c1d19df69b6758d4"
+ },
+ {
+  "id": "OBJ105",
+  "name": "key",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "34c6b2a44649f2eb834e198c47108cc8d83467fe"
+ },
+ {
+  "id": "OBJ106",
+  "name": "key",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "3d70d1c79e3a637e976563be460de45f87921bc6"
+ },
+ {
+  "id": "OBJ107",
+  "name": "key",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "a44d6f6cc07a71d15888cc206e8e22255e0c107f"
+ },
+ {
+  "id": "OBJ108",
+  "name": "key",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "5e672293a06c3f14bec6910a67067df3499083a4"
+ },
+ {
+  "id": "OBJ109",
+  "name": "key",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "7b37ce822bb0d224a342c1e5218ca6ad48125232"
+ },
+ {
+  "id": "OBJ10a",
+  "name": "key",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "fd0570099420c8ab9e7508ddd3afd469304bfd79"
+ },
+ {
+  "id": "OBJ10b",
+  "name": "key",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "04ff622dc81c355a305475d6f516615bca3d6f25"
+ },
+ {
+  "id": "OBJ10c",
+  "name": "key",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "7e90cd90b2efd9ab32c6a14de2298b81cc068aa0"
+ },
+ {
+  "id": "OBJ10d",
+  "name": "key",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "2f50e630e7def776a07a23e463f09a11b40a336e"
+ },
+ {
+  "id": "OBJ10e",
+  "name": "key",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "27b8891a02810c421c28870787cf571fecc70266"
+ },
+ {
+  "id": "OBJ110",
+  "name": "flat plaque or picture",
+  "variant_of": null,
+  "kind": "item",
+  "master": "voxel",
+  "colourings": [],
+  "voxel_sha1": "f84abc54967acc06102631787b4f0f360b1df8d6"
+ },
+ {
+  "id": "OBJ111",
+  "name": "crystal splinter",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "92ce727b45178314a0ed126ab890537cbb6063cb"
+ },
+ {
+  "id": "OBJ112",
+  "name": "small thing, a few pixels",
+  "variant_of": null,
+  "kind": "item",
+  "master": "voxel",
+  "colourings": [],
+  "voxel_sha1": "a1ac23e179a70efa989297d3fd4ce55c36a72d21"
+ },
+ {
+  "id": "OBJ113",
+  "name": "small thing, a few pixels",
+  "variant_of": null,
+  "kind": "item",
+  "master": "voxel",
+  "colourings": [],
+  "voxel_sha1": "522c3d4f4f132eda7f21d3acdcc92845c207db74"
+ },
+ {
+  "id": "OBJ114",
+  "name": "book",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "b73778dd7244be4e2c3d0bced33c7894e42ed7bc"
+ },
+ {
+  "id": "OBJ116",
+  "name": "small thing, a few pixels",
+  "variant_of": null,
+  "kind": "item",
+  "master": "voxel",
+  "colourings": [],
+  "voxel_sha1": "128c537d9e7982a491bfd2267c59f45877295e9c"
+ },
+ {
+  "id": "OBJ117",
+  "name": "orb",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "238b43802f4ba0168da02caaa8bf9b8311bf7e2d"
+ },
+ {
+  "id": "OBJ118",
+  "name": "small thing, a few pixels",
+  "variant_of": null,
+  "kind": "item",
+  "master": "voxel",
+  "colourings": [],
+  "voxel_sha1": "b3d9af6a0b4ba74c6e35101dc9dbcee7c9da3aac"
+ },
+ {
+  "id": "OBJ119",
+  "name": "broken hilt",
+  "variant_of": null,
+  "kind": "item",
+  "master": "voxel",
+  "colourings": [],
+  "voxel_sha1": "9a2e20dc370301f32ed5966a703ea7987651e373"
+ },
+ {
+  "id": "OBJ11c",
+  "name": "small thing, a few pixels",
+  "variant_of": null,
+  "kind": "item",
+  "master": "voxel",
+  "colourings": [],
+  "voxel_sha1": "65a0844d97b5c07be8649222f6757c25a7725afb"
+ },
+ {
+  "id": "OBJ11d",
+  "name": "stain or puddle on the floor",
+  "variant_of": null,
+  "kind": "item",
+  "master": "voxel",
+  "colourings": [],
+  "voxel_sha1": "940b9c60ea7833a904c940f786805bfe9eae1975"
+ },
+ {
+  "id": "OBJ11e",
+  "name": "small thing, a few pixels",
+  "variant_of": null,
+  "kind": "item",
+  "master": "voxel",
+  "colourings": [],
+  "voxel_sha1": "d48490242b3a91bf437602b9f001574c04bfe0aa"
+ },
+ {
+  "id": "OBJ11f",
+  "name": "standard",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "1bfedd0ed9f3c729a283f40e84aae9aa014a467f"
+ },
+ {
+  "id": "OBJ121",
+  "name": "bedroll",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "220bff018566166fd05cacb2aa29544a874c4c07"
+ },
+ {
+  "id": "OBJ123",
+  "name": "mandolin",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "111ddd1b2188ede3e1fc6fa715ffd419bc99afa9"
+ },
+ {
+  "id": "OBJ124",
+  "name": "wooden stick",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "cc4ac2cf95313b51322b53a5d6ba903263d4cb5e"
+ },
+ {
+  "id": "OBJ125",
+  "name": "grass or plant tufts",
+  "variant_of": null,
+  "kind": "item",
+  "master": "voxel",
+  "colourings": [],
+  "voxel_sha1": "e80a71d5ed1b09ebc7f76fd89cd7ec36bc7e632d"
+ },
+ {
+  "id": "OBJ126",
+  "name": "small thing, a few pixels",
+  "variant_of": null,
+  "kind": "item",
+  "master": "voxel",
+  "colourings": [],
+  "voxel_sha1": "4244107b73f2c306a746a3b7f5ea11a6e0d12cee"
+ },
+ {
+  "id": "OBJ127",
+  "name": "small thing, a few pixels",
+  "variant_of": null,
+  "kind": "item",
+  "master": "voxel",
+  "colourings": [],
+  "voxel_sha1": "143076e5db3575dfcea8705d71a63d14e3616323"
+ },
+ {
+  "id": "OBJ128",
+  "name": "rock hammer",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "1daaec535ded9dd848b36000b26b58ecd6cac359"
+ },
+ {
+  "id": "OBJ129",
+  "name": "small thing, a few pixels",
+  "variant_of": null,
+  "kind": "item",
+  "master": "voxel",
+  "colourings": [],
+  "voxel_sha1": "425b9b10fcfb698c57ca8fe30c3b641842e1a624"
+ },
+ {
+  "id": "OBJ12a",
+  "name": "campfire",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "ac408a568ade5702e3b9ef49fcc8725e75276e6d"
+ },
+ {
+  "id": "OBJ12b",
+  "name": "fishing pole",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "1c15d50c53d354c377a717140f0797d89bced4d1"
+ },
+ {
+  "id": "OBJ12c",
+  "name": "chain, cord or necklace lying flat",
+  "variant_of": null,
+  "kind": "item",
+  "master": "voxel",
+  "colourings": [],
+  "voxel_sha1": "5285dfe172a62447499fa0f0a6ef476a7e6611be"
+ },
+ {
+  "id": "OBJ12d",
+  "name": "oil flask",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "dc3d1982691088b3bf21559370b462e0351215f3"
+ },
+ {
+  "id": "OBJ12e",
+  "name": "fountain",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "d5763fbea4e95a55f150ae12304db511fd0b1ebf"
+ },
+ {
+  "id": "OBJ12f",
+  "name": "cauldron",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "4cea06fa7e1b40d0bae79851432ee999779dd020"
+ },
+ {
+  "id": "OBJ130",
+  "name": "book",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "ca1c44ede6eba86af8df322a2b48ed2c7092d9d1"
+ },
+ {
+  "id": "OBJ131",
+  "name": "book",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "2cd811d23827b64f04ae8bbebebf29e3bd69b5ef"
+ },
+ {
+  "id": "OBJ132",
+  "name": "book",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "bcdee496c3c00d1fd301a8919a086afac5992e72"
+ },
+ {
+  "id": "OBJ133",
+  "name": "book",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "a9900f6245f2c12a79c11fe5ef8525239c3e5e86"
+ },
+ {
+  "id": "OBJ135",
+  "name": "book",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "24784d911a50f54ec5fb27151b5528e3023ced32"
+ },
+ {
+  "id": "OBJ136",
+  "name": "book",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "94184c595b499bc6635b1e03fd7f922758fc1210"
+ },
+ {
+  "id": "OBJ137",
+  "name": "book",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "c7b6a9509a93fc4a656b880f3e092f0afe9e3fda"
+ },
+ {
+  "id": "OBJ138",
+  "name": "rolled scroll",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "3f8e79fc11fc29db7d5bf8c3de29de66b1798a71"
+ },
+ {
+  "id": "OBJ139",
+  "name": "scroll",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "0c55b43d9e31a66fb4c1fb6a6e68badd553a458a"
+ },
+ {
+  "id": "OBJ13a",
+  "name": "flat sheet on the floor",
+  "variant_of": null,
+  "kind": "item",
+  "master": "voxel",
+  "colourings": [],
+  "voxel_sha1": "4d6e4ce3d8aaa1dd26098008142547cc952781b6"
+ },
+ {
+  "id": "OBJ13b",
+  "name": "flat sheet on the floor",
+  "variant_of": null,
+  "kind": "item",
+  "master": "voxel",
+  "colourings": [],
+  "voxel_sha1": "17bb973ef3557ddc30c8144357985f2a4d7066cf"
+ },
+ {
+  "id": "OBJ13c",
+  "name": "flat sheet on the floor",
+  "variant_of": null,
+  "kind": "item",
+  "master": "voxel",
+  "colourings": [],
+  "voxel_sha1": "e6d82e61797eba5d864a0d05ccd75fd6766b00ca"
+ },
+ {
+  "id": "OBJ13d",
+  "name": "flat sheet on the floor",
+  "variant_of": null,
+  "kind": "item",
+  "master": "voxel",
+  "colourings": [],
+  "voxel_sha1": "baf21e681f88f0883970e664fb8bf260cb5a7261"
+ },
+ {
+  "id": "OBJ13e",
+  "name": "flat sheet on the floor",
+  "variant_of": null,
+  "kind": "item",
+  "master": "voxel",
+  "colourings": [],
+  "voxel_sha1": "9834175e2ebd004bae0a9d4c678b081e96c7ff59"
+ },
+ {
+  "id": "OBJ13f",
+  "name": "rolled scroll",
+  "variant_of": null,
+  "kind": "item",
+  "master": "smooth",
+  "colourings": [],
+  "voxel_sha1": "0fa9a7593715375219ab19b92b7c24abb88bde34"
+ }
+]

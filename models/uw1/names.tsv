@@ -1,0 +1,212 @@
+id	name
+CR00	goblin
+CR01	skeleton warrior
+CR02	lizardman
+CR03	cave bat
+CR04	mage in a yellow robe
+CR05	giant spider
+CR06	gazer, a floating eye
+CR07	troll
+CR10	woman mage in a blue robe
+CR11	flesh slug
+CR13	ghoul
+CR14	horned demon
+CR15	ghost
+CR16	goblin in a breastplate
+CR17	reaper, a living dead tree
+CR20	giant rat
+CR21	woman fighter
+CR22	imp
+CR23	earth golem
+CR24	headless
+CR25	mage in a blue robe with a staff
+CR26	rotworm
+CR31	lurker
+CR32	human fighter
+CR33	dwarf warrior
+CR35	mage in a red robe
+OBJ000	axe
+OBJ001	battle axe
+OBJ002	axe
+OBJ003	dagger
+OBJ004	sword
+OBJ005	long sword
+OBJ006	sword
+OBJ007	mace
+OBJ008	light mace
+OBJ009	mace
+OBJ00b	axe
+OBJ00c	sword
+OBJ00d	sword
+OBJ00e	mace
+OBJ010	small thing, a few pixels
+OBJ018	chain, cord or necklace lying flat
+OBJ019	bow
+OBJ01a	crossbow
+OBJ01f	bow
+OBJ020	leather vest
+OBJ021	mail shirt
+OBJ022	breastplate
+OBJ023	leather leggings
+OBJ024	mail leggings
+OBJ025	plate leggings
+OBJ026	leather gloves
+OBJ027	chain gauntlets
+OBJ028	gauntlets
+OBJ029	leather boots
+OBJ02a	boots
+OBJ02b	boots
+OBJ02c	leather cap
+OBJ02d	chain cowl
+OBJ02e	helmet
+OBJ030	crown
+OBJ031	crown
+OBJ032	crown
+OBJ036	small ring
+OBJ037	heater shield
+OBJ038	small ring
+OBJ039	small thing, a few pixels
+OBJ03a	small ring
+OBJ03b	heater shield
+OBJ03c	wooden heater shield
+OBJ03d	round shield
+OBJ03e	buckler
+OBJ03f	heater shield
+OBJ080	sack
+OBJ082	pack
+OBJ084	box
+OBJ086	pouch
+OBJ088	map case
+OBJ08a	gold chest
+OBJ08c	urn
+OBJ08d	quiver
+OBJ08e	bowl
+OBJ08f	sack
+OBJ090	lantern
+OBJ091	torch
+OBJ092	small thing, a few pixels
+OBJ093	candle
+OBJ098	wand
+OBJ099	wand
+OBJ09a	wand
+OBJ09b	wand
+OBJ09d	broken wand
+OBJ09f	curved rod
+OBJ0a0	pile of gold coins
+OBJ0a1	small thing, a few pixels
+OBJ0a2	cut gem
+OBJ0a3	cut gem
+OBJ0a4	cut gem
+OBJ0a5	cut gem
+OBJ0a6	cut gem
+OBJ0a7	emerald
+OBJ0a8	chain, cord or necklace lying flat
+OBJ0a9	goblet
+OBJ0aa	sceptre
+OBJ0ab	chain, cord or necklace lying flat
+OBJ0ac	gold plate
+OBJ0ad	chain, cord or necklace lying flat
+OBJ0b0	piece of meat
+OBJ0b1	loaf of bread
+OBJ0b2	piece of cheese
+OBJ0b3	apple
+OBJ0b4	ear of corn
+OBJ0b5	loaf of bread
+OBJ0b6	fish
+OBJ0b8	mushroom
+OBJ0b9	grey toadstool
+OBJ0ba	bottle
+OBJ0bb	red flask
+OBJ0bc	green potion
+OBJ0bd	bottle of water
+OBJ0be	bottle
+OBJ0bf	bottle
+OBJ0c0	grass or plant tufts
+OBJ0c1	grass or plant tufts
+OBJ0c2	skull, side
+OBJ0c3	skull, front
+OBJ0c4	bone
+OBJ0c5	small bone
+OBJ0c6	pile of bones
+OBJ0c8	broken axe
+OBJ0c9	broken sword
+OBJ0ca	broken mace
+OBJ0cb	broken shield
+OBJ0cc	wooden stick
+OBJ0cd	piece of wood
+OBJ0ce	grass or plant tufts
+OBJ0cf	grass or plant tufts
+OBJ0d0	rubble heap
+OBJ0d1	pile of debris
+OBJ0d2	pile of debris
+OBJ0d3	stalactite
+OBJ0d4	grass or plant tufts
+OBJ0d5	stain or puddle on the floor
+OBJ0d6	rubble heap
+OBJ0d7	anvil
+OBJ0d8	pole
+OBJ0d9	stain or puddle on the floor
+OBJ0da	heap of rubble
+OBJ0db	scattered bits on the floor
+OBJ0dc	scattered bits on the floor
+OBJ0dd	stain or puddle on the floor
+OBJ0de	stain or puddle on the floor
+OBJ0df	stain or puddle on the floor
+OBJ0e0	runestone
+OBJ100	key
+OBJ101	key
+OBJ102	key
+OBJ103	key
+OBJ104	key
+OBJ105	key
+OBJ106	key
+OBJ107	key
+OBJ108	key
+OBJ109	key
+OBJ10a	key
+OBJ10b	key
+OBJ10c	key
+OBJ10d	key
+OBJ10e	key
+OBJ110	flat plaque or picture
+OBJ111	crystal splinter
+OBJ112	small thing, a few pixels
+OBJ113	small thing, a few pixels
+OBJ114	book
+OBJ116	small thing, a few pixels
+OBJ117	orb
+OBJ118	small thing, a few pixels
+OBJ119	broken hilt
+OBJ11c	small thing, a few pixels
+OBJ11d	stain or puddle on the floor
+OBJ11e	small thing, a few pixels
+OBJ11f	standard
+OBJ121	bedroll
+OBJ123	mandolin
+OBJ124	wooden stick
+OBJ125	grass or plant tufts
+OBJ126	small thing, a few pixels
+OBJ127	small thing, a few pixels
+OBJ128	rock hammer
+OBJ129	small thing, a few pixels
+OBJ12a	campfire
+OBJ12b	fishing pole
+OBJ12c	chain, cord or necklace lying flat
+OBJ12d	oil flask
+OBJ12e	fountain
+OBJ12f	cauldron
+OBJ130	book
+OBJ131	book
+OBJ132	book
+OBJ133	book
+OBJ135	book
+OBJ136	book
+OBJ137	book
+OBJ138	rolled scroll
+OBJ139	scroll
+OBJ13a	flat sheet on the floor
+OBJ13b	flat sheet on the floor
+OBJ13c	flat sheet on the floor
+OBJ13d	flat sheet on the floor
+OBJ13e	flat sheet on the floor
+OBJ13f	rolled scroll
