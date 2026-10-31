@@ -154,3 +154,4 @@ def test_variant_packs_into_its_own_folder(tmp_path):
     go(repo, variant="shiny")
     assert {k: v for k, v in snapshot(repo).items() if k.parts[0] == "port"} == before
     assert (vdir / "port/OBJ090.glb").exists() and (vdir / "port/OBJ090.vox").exists()
+    assert (repo / "site/data/uw1/variants/shiny/OBJ090.uwvc").exists()   # the site's display voxels

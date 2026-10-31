@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Underworld Models</title>
+<meta name="description" content="Fan-made 3D models of the creatures and objects of Ultima Underworld, to view, judge against the game and improve.">
+<link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+<header class="top">
+  <h1><a href="./">Underworld Models</a></h1>
+  <p>Fan-made 3D models of the creatures and objects of Ultima Underworld, true to the original sprites. Click a model to turn it, play its animations and compare it with the game. Anyone can improve them: see <a href="https://github.com/abedegno/underworld-models#readme">how to help</a>.</p>
+</header>
+<main>
+  <div class="bar">
+    <div class="tabs" role="tablist">
+      <button role="tab" data-kind="creature" aria-selected="true">Creatures</button>
+      <button role="tab" data-kind="item" aria-selected="false">Items</button>
+    </div>
+    <input id="search" type="search" placeholder="Search by name" aria-label="Search by name">
+  </div>
+  <p id="count" class="count"></p>
+  <ul id="grid" class="grid"></ul>
+</main>
+<footer class="foot">Ultima Underworld belongs to its owners. These are fan-made models; the licence (CC BY-SA 4.0) covers this project's own work only. <a href="https://github.com/abedegno/underworld-models">Source on GitHub</a>.</footer>
+<script src="js/gallery.js"></script>
+</body>
+</html>

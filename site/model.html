@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Underworld Models</title>
+<link rel="stylesheet" href="css/site.css">
+<script type="importmap">
+{ "imports": {
+  "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+  "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+} }
+</script>
+</head>
+<body>
+<header class="top small">
+  <h1><a href="./">Underworld Models</a></h1>
+  <a id="back" class="back" href="./">&larr; All models</a>
+</header>
+<main class="model">
+  <section class="stage">
+    <div id="view" class="view" aria-label="3D view: drag to turn, scroll or pinch to zoom"></div>
+    <p class="hint">Drag to turn, scroll or pinch to zoom.</p>
+  </section>
+  <aside class="panel">
+    <h2 id="name">Loading…</h2>
+    <p id="meta" class="meta"></p>
+    <div class="controls">
+      <div class="switch" role="group" aria-label="Show">
+        <button id="smooth" aria-pressed="true">Smooth</button>
+        <button id="voxels" aria-pressed="false">Voxels</button>
+      </div>
+      <label id="clipRow" hidden>Animation
+        <select id="clip"></select>
+      </label>
+      <button id="play" hidden>Pause</button>
+      <label id="colourRow" hidden>Colouring
+        <select id="colour"></select>
+      </label>
+    </div>
+    <figure class="shot">
+      <img id="shot" alt="The original sprite in the game">
+      <figcaption>The original, in the game</figcaption>
+    </figure>
+    <div class="links">
+      <a id="download" class="button" download>Download</a>
+      <a id="howto" class="button">How to improve</a>
+      <a id="github" class="button">View on GitHub</a>
+    </div>
+    <p id="error" class="error" hidden></p>
+  </aside>
+</main>
+<script type="module" src="js/viewer.js"></script>
+</body>
+</html>

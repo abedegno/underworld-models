@@ -20,6 +20,7 @@ from pathlib import Path
 import numpy as np
 
 from . import export, game, gltf, magica, uwvx, voxelise
+from .uwvc import used_slots, write_uwvc
 
 
 class PackError(Exception):
@@ -211,6 +212,8 @@ class Packer:
             raise PackError(f"no variant folder variants/uw1/{name}")
         out = vdir / "port"
         out.mkdir(exist_ok=True)
+        data = self.data / "variants" / name   # the site's display voxels
+        data.mkdir(parents=True, exist_ok=True)
         known = {e["id"]: e for e in json.loads((self.repo / "models/uw1/manifest.json").read_text())}
         for src in sorted(vdir.glob("*.glb")):
             mid = src.stem
@@ -220,9 +223,15 @@ class Packer:
                 continue
             if known[mid]["kind"] == "item":
                 _, idx = self.item_glb(mid, src, out, False)
-                self.write_vox(mid, voxelise.item(gltf.read(out / f"{mid}.glb"), idx), out)
+                model = voxelise.item(gltf.read(out / f"{mid}.glb"), idx)
+                self.write_vox(mid, model, out)
+                export.item_uwvc(mid, model, self.pal, data)
             else:
                 self.creature(dict(known[mid]), src, out, False)
+                body = int(mid[2:], 8)
+                base = self.aux_for(body)[export.base_aux(body, self.types)]
+                model = uwvx.read(out / f"{mid}.vox")
+                write_uwvc(model, [{s: tuple(self.pal[base[s]]) for s in used_slots(model)}], data / f"{mid}.uwvc")
         return self.report
 
 
