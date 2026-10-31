@@ -61,6 +61,42 @@ def magica_voxels(model: uwvx.Model, pal) -> tuple:
     return f[:, :3].astype(int), pal[f[:, 3]]
 
 
+def creature_display(mid, name, model, slots, aux, base, types, pal, data, names) -> list:
+    """Writes a creature's colouring textures and display voxels; returns its colourings, the base one first."""
+    body = int(mid[2:], 8)
+    auxes = sorted({a for t, b, a in types if b == body}) or [base]
+    changing = [s for s in range(32) if len({int(aux[a][s]) for a in auxes}) > 1]
+    moving = np.isin(slots, changing)   # texels whose colour differs between colourings
+    pairs = []   # (colouring, its slot-to-colour table), one per aux palette in use
+    for a in auxes:
+        img = pal[aux[a][slots]]
+        Image.fromarray(img).save(data / f"{mid}-{a}.png")
+        word = colour_word(img[moving]) if len(auxes) > 1 and moving.any() else ""
+        label = names.get(f"{mid}:{a}") or (f"{name}, {word}" if word else name)
+        pairs.append(({"aux": a, "name": label}, {s: tuple(pal[aux[a][s]]) for s in used_slots(model)}))
+    words = [c["name"] for c, _ in pairs]
+    seen = {}
+    for c, _ in pairs:   # two colourings given the same word get numbers
+        if words.count(c["name"]) > 1 and f"{mid}:{c['aux']}" not in names:
+            seen[c["name"]] = seen.get(c["name"], 0) + 1
+            c["name"] += f" {seen[c['name']]}"
+    pairs.sort(key=lambda p: p[0]["aux"] != base)   # the base colouring first
+    write_uwvc(model, [t for _, t in pairs], data / f"{mid}.uwvc")
+    return [c for c, _ in pairs]
+
+
+def item_display(mid, model, pal, voxels, data) -> str:
+    """Writes an item's MagicaVoxel copy and display voxels; returns the MagicaVoxel file's sha1."""
+    v, c = magica_voxels(model, pal)
+    magica.write(voxels / f"{mid}.vox", v, c)
+    item_uwvc(mid, model, pal, data)
+    return sha1(voxels / f"{mid}.vox")
+
+
+def item_uwvc(mid, model, pal, data):
+    write_uwvc(model, [{s: tuple(pal[s]) for s in used_slots(model)}], data / f"{mid}.uwvc")
+
+
 def run(uw1, src_port, repo, pal=None, aux_for=None, types=None) -> list[str]:
     src_port, repo = Path(src_port), Path(repo)
     pal = game.main_palette(uw1) if pal is None else pal
@@ -89,35 +125,16 @@ def run(uw1, src_port, repo, pal=None, aux_for=None, types=None) -> list[str]:
             g = gltf.read(glb)
             slots = gltf.texture(g)[..., 0]
             gltf.write(gltf.with_texture(g, pal[aux[base][slots]]), editable / f"{mid}.glb")
-            auxes = sorted({a for t, b, a in types if b == body})
-            changing = [s for s in range(32) if len({int(aux[a][s]) for a in auxes}) > 1]
-            moving = np.isin(slots, changing)   # texels whose colour differs between colourings
-            pairs = []   # (colouring, its slot-to-colour table), one per aux palette in use
-            for a in auxes:
-                img = pal[aux[a][slots]]
-                Image.fromarray(img).save(data / f"{mid}-{a}.png")
-                word = colour_word(img[moving]) if len(auxes) > 1 and moving.any() else ""
-                name = names.get(f"{mid}:{a}") or (f"{entry['name']}, {word}" if word else entry["name"])
-                pairs.append(({"aux": a, "name": name}, {s: tuple(pal[aux[a][s]]) for s in used_slots(model)}))
-            words = [c["name"] for c, _ in pairs]
-            seen = {}
-            for c, _ in pairs:   # two colourings given the same word get numbers
-                if words.count(c["name"]) > 1 and f"{mid}:{c['aux']}" not in names:
-                    seen[c["name"]] = seen.get(c["name"], 0) + 1
-                    c["name"] += f" {seen[c['name']]}"
-            pairs.sort(key=lambda p: p[0]["aux"] != base)   # the base colouring first
-            colourings = [c for c, _ in pairs]
-            write_uwvc(model, [t for _, t in pairs], data / f"{mid}.uwvc")
-            entry.update(kind="creature", master="smooth", colourings=colourings)
+            colourings = creature_display(mid, entry["name"], model, slots, aux, base, types, pal, data, names)
+            entry.update(kind="creature", master="smooth", colourings=colourings,
+                         editable_sha1=sha1(editable / f"{mid}.glb"))
         else:
+            entry.update(kind="item", master="smooth" if glb.exists() else "voxel", colourings=[])
             if glb.exists():
                 g = gltf.read(glb)
                 gltf.write(gltf.with_texture(g, pal[gltf.texture(g)[..., 0]]), editable / f"{mid}.glb")
-            v, c = magica_voxels(model, pal)
-            magica.write(voxels / f"{mid}.vox", v, c)
-            write_uwvc(model, [{s: tuple(pal[s]) for s in used_slots(model)}], data / f"{mid}.uwvc")
-            entry.update(kind="item", master="smooth" if glb.exists() else "voxel", colourings=[],
-                         voxel_sha1=sha1(voxels / f"{mid}.vox"))
+                entry["editable_sha1"] = sha1(editable / f"{mid}.glb")
+            entry["voxel_sha1"] = item_display(mid, model, pal, voxels, data)
         manifest.append(entry)
     (repo / "models/uw1/manifest.json").write_text(json.dumps(manifest, indent=1) + "\n")
     return report

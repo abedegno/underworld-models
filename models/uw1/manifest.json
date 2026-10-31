@@ -22,7 +22,8 @@
     "aux": 3,
     "name": "goblin, grey 2"
    }
-  ]
+  ],
+  "editable_sha1": "af2fe76a0b43b8e1903185811016a60847f3bd62"
  },
  {
   "id": "CR01",
@@ -35,7 +36,8 @@
     "aux": 0,
     "name": "skeleton warrior"
    }
-  ]
+  ],
+  "editable_sha1": "294664710d280a759cc137eacf2f65ef5e7f610a"
  },
  {
   "id": "CR02",
@@ -56,7 +58,8 @@
     "aux": 2,
     "name": "lizardman, grey"
    }
-  ]
+  ],
+  "editable_sha1": "91385f0672e0e5d151dc5e04e9b1c0ab90590f50"
  },
  {
   "id": "CR03",
@@ -73,7 +76,8 @@
     "aux": 1,
     "name": "cave bat, red"
    }
-  ]
+  ],
+  "editable_sha1": "07ff34c983c7ca79d3f0f06c2602fccd8eed5847"
  },
  {
   "id": "CR04",
@@ -94,7 +98,8 @@
     "aux": 2,
     "name": "mage in a yellow robe, orange 2"
    }
-  ]
+  ],
+  "editable_sha1": "7ee76d2740edfe24f4345d941c7df2536ed9aee3"
  },
  {
   "id": "CR05",
@@ -115,7 +120,8 @@
     "aux": 2,
     "name": "giant spider, grey 2"
    }
-  ]
+  ],
+  "editable_sha1": "9f4635e0a904346cc6d2b7af5d3a7cc6cb5be0c5"
  },
  {
   "id": "CR06",
@@ -128,7 +134,8 @@
     "aux": 0,
     "name": "gazer, a floating eye"
    }
-  ]
+  ],
+  "editable_sha1": "778505fb8deed4fb0b3d4a6bbc8f14cd78fb1685"
  },
  {
   "id": "CR07",
@@ -149,7 +156,8 @@
     "aux": 2,
     "name": "troll, red"
    }
-  ]
+  ],
+  "editable_sha1": "7b0b820b122ace829027baf1892868e3b7cbbe44"
  },
  {
   "id": "CR10",
@@ -162,7 +170,8 @@
     "aux": 0,
     "name": "woman mage in a blue robe"
    }
-  ]
+  ],
+  "editable_sha1": "7a72cccc5f62b113293e2b8c39fecdb9abef9276"
  },
  {
   "id": "CR11",
@@ -179,7 +188,8 @@
     "aux": 1,
     "name": "flesh slug, green"
    }
-  ]
+  ],
+  "editable_sha1": "042c5e467ec354b937de3ef8a1d253e7e4473c92"
  },
  {
   "id": "CR13",
@@ -200,7 +210,8 @@
     "aux": 2,
     "name": "ghoul, red"
    }
-  ]
+  ],
+  "editable_sha1": "bd0efb47cd63d1f5081edc209eed5a5c6c030047"
  },
  {
   "id": "CR14",
@@ -213,7 +224,8 @@
     "aux": 0,
     "name": "horned demon"
    }
-  ]
+  ],
+  "editable_sha1": "c5c075fe555947e323200a38b981231e6feacb85"
  },
  {
   "id": "CR15",
@@ -238,7 +250,8 @@
     "aux": 3,
     "name": "ghost, blue 2"
    }
-  ]
+  ],
+  "editable_sha1": "8e150c93b0a371168e9a23f9ceabcaff26fd0e7f"
  },
  {
   "id": "CR16",
@@ -255,7 +268,8 @@
     "aux": 1,
     "name": "goblin in a breastplate, grey"
    }
-  ]
+  ],
+  "editable_sha1": "1e874327b729ae6ea4d9a34a02da11665c7fa4e7"
  },
  {
   "id": "CR17",
@@ -268,7 +282,8 @@
     "aux": 0,
     "name": "reaper, a living dead tree"
    }
-  ]
+  ],
+  "editable_sha1": "dbd44f072a7086f36da8d7bdc5bb22ac68fb4df9"
  },
  {
   "id": "CR20",
@@ -285,7 +300,8 @@
     "aux": 1,
     "name": "giant rat, grey"
    }
-  ]
+  ],
+  "editable_sha1": "c146ca73cf342b76fd35f9dc186de0c30c293e95"
  },
  {
   "id": "CR21",
@@ -302,7 +318,8 @@
     "aux": 1,
     "name": "woman fighter, orange 2"
    }
-  ]
+  ],
+  "editable_sha1": "99bffad9b44afa97ade2c9df888429dbb7f1e08d"
  },
  {
   "id": "CR22",
@@ -319,7 +336,8 @@
     "aux": 1,
     "name": "imp, orange"
    }
-  ]
+  ],
+  "editable_sha1": "156d3e90c2e9a65a1f4c7f823421a4ec1462df55"
  },
  {
   "id": "CR23",
@@ -340,7 +358,8 @@
     "aux": 2,
     "name": "earth golem, orange 2"
    }
-  ]
+  ],
+  "editable_sha1": "9ee5c4ddccb822c855f45ed20737832a09232510"
  },
  {
   "id": "CR24",
@@ -353,7 +372,8 @@
     "aux": 0,
     "name": "headless"
    }
-  ]
+  ],
+  "editable_sha1": "cc84274ff0613f031d68cdb11773f7cfeec3e1a9"
  },
  {
   "id": "CR25",
@@ -370,7 +390,8 @@
     "aux": 1,
     "name": "mage in a blue robe with a staff, red"
    }
-  ]
+  ],
+  "editable_sha1": "cf9acda9fc03c8a2975af60a6f73e8e9fd7b87eb"
  },
  {
   "id": "CR26",
@@ -387,7 +408,8 @@
     "aux": 1,
     "name": "rotworm, green"
    }
-  ]
+  ],
+  "editable_sha1": "e626849f15b14c8f9bc276e01b4a5ea823200bbf"
  },
  {
   "id": "CR31",
@@ -404,7 +426,8 @@
     "aux": 1,
     "name": "lurker, green"
    }
-  ]
+  ],
+  "editable_sha1": "4916e9c97f961c6eb02e2982ce940e5c27bfa64a"
  },
  {
   "id": "CR32",
@@ -429,7 +452,8 @@
     "aux": 3,
     "name": "human fighter, green 2"
    }
-  ]
+  ],
+  "editable_sha1": "ba0117c4a552c6038f6aa3b8bcfd751267039bcc"
  },
  {
   "id": "CR33",
@@ -446,7 +470,8 @@
     "aux": 1,
     "name": "dwarf warrior, orange 2"
    }
-  ]
+  ],
+  "editable_sha1": "aa2571e72d0da2c9f2c8bdef74946fb2f54effb8"
  },
  {
   "id": "CR35",
@@ -459,7 +484,8 @@
     "aux": 0,
     "name": "mage in a red robe"
    }
-  ]
+  ],
+  "editable_sha1": "8882ce238ee0c3fde9e730744c11d7b0f7a85243"
  },
  {
   "id": "OBJ000",
@@ -468,6 +494,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "8f4bf0ee8bc42f5354e4379cc549d98316c66f3f",
   "voxel_sha1": "5a029fbfcc29cf191c4ec0d56b52e0f67a9f2c8e"
  },
  {
@@ -477,6 +504,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "424deaef099346de99339b5762ef0adc97456f33",
   "voxel_sha1": "c354a4f4c23a4885b77958b9abe9a1fabb8aceac"
  },
  {
@@ -486,6 +514,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "817fe58d8fb6e0849cfaeb51a8e5cd82a12add06",
   "voxel_sha1": "6dc2eb633b1f86e034e500f1bca3b783e82f1d80"
  },
  {
@@ -495,6 +524,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "891c60c9d645f5db96a8e7d195b610cdf6453be3",
   "voxel_sha1": "69f418166f2e3a05a4f75427560d3edbe79fdbfd"
  },
  {
@@ -504,6 +534,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "f2509e0207db253e92e29ffb055e9722dabf4e56",
   "voxel_sha1": "fa5dfe47b91134b217693310842eaf74d451ee1b"
  },
  {
@@ -513,6 +544,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "516b28b878211333428dac658ecc704f87e911e4",
   "voxel_sha1": "cab9526c678f2542dbd4569c27d816f75db67b93"
  },
  {
@@ -522,6 +554,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "bc8df222da8a808eec016605c13295d821245b6b",
   "voxel_sha1": "c107789bff9677ca4c1a078f11a9e54719bc314b"
  },
  {
@@ -531,6 +564,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "e4196a9624de2ce2687c452415d0e5f1a4dbf91b",
   "voxel_sha1": "70cd275e22ef0a6e525e89d0d11ef1bd90c852dd"
  },
  {
@@ -540,6 +574,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "fd63c29d78e35d7fcb0c0cf6ae12a370f03ac682",
   "voxel_sha1": "8bd73b51cf30ae9c0ce425d7d3ebe100e7fd6f45"
  },
  {
@@ -549,6 +584,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "dacde813a3e51d948649cf38ae469557599a3a83",
   "voxel_sha1": "cd48b5e52c76ef0f7b1184b984f57ebbcb832590"
  },
  {
@@ -558,6 +594,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "f35c61d23fcf24d2c6ff3db3adb90658138ed6dc",
   "voxel_sha1": "6b08eee44dfc010c6e8f12c7ed166379106d2482"
  },
  {
@@ -567,6 +604,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "3f829705da45aeb7ce71d669a34a3386a12b3a4f",
   "voxel_sha1": "44becf085d4ff3715fa70a0fd548a0937121afc7"
  },
  {
@@ -576,6 +614,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "9adbfaf7a700b76759c7676ec63f21af5125922f",
   "voxel_sha1": "22345bf8011bbec52069aee9e1caa07a2f8df5ac"
  },
  {
@@ -585,6 +624,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "75e8ba2b454aea0f861dcb793a2476660f89f3b6",
   "voxel_sha1": "bed2ce411cd33718a58a73886b2ed8af76bc061a"
  },
  {
@@ -612,6 +652,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "90e9ef02871b5e628dfccc09409c1a0f874c9ea3",
   "voxel_sha1": "ba0159da4ebd0290ab339878389b663612f5800e"
  },
  {
@@ -621,6 +662,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "8548601842ef880df856bc92687880a6aa8b71e7",
   "voxel_sha1": "f56bb80bc5c7538b9ea09a0612db80eebee30d9f"
  },
  {
@@ -630,6 +672,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "071a3f459890125c0beafc437d4dc60196651e7c",
   "voxel_sha1": "676ac70c3a999bd4a14a2aa616b6cf1d30ceed4a"
  },
  {
@@ -639,6 +682,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "8d257be72aa32e462238ca628709957b0dc8dae7",
   "voxel_sha1": "e5f92a2a7cd00b6e462172b26f20c8fcab40a1c9"
  },
  {
@@ -648,6 +692,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "1fa74bc11ebdaff5ece6324fb31ff631d01e4082",
   "voxel_sha1": "0918702f37010d3fedde906bd6d721b4e2b772eb"
  },
  {
@@ -657,6 +702,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "570204313431f458e0de03baa7fe8006ea46f4eb",
   "voxel_sha1": "d1a0066cd6ded794c56697dce39493acf4817c10"
  },
  {
@@ -666,6 +712,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "dd1a8200bd01c49527e384b62d34209c2885f8a4",
   "voxel_sha1": "8bec9651e452816075a877a0176e079240e01955"
  },
  {
@@ -675,6 +722,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "4804fed0453278c4867b1910be1b6d7686e79484",
   "voxel_sha1": "552d14a83e90dc98ea80089244b4302ad9198b26"
  },
  {
@@ -684,6 +732,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "91697352a3321cac6e8221d63dade99d07e84426",
   "voxel_sha1": "6a749b95ce9fa0981cc15e0ad27d0655ee8ba442"
  },
  {
@@ -693,6 +742,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "b5dc1dee4283819354de03cd8f3d1de5fc597d33",
   "voxel_sha1": "0048a0658b628c5d0604955b13168516128e1682"
  },
  {
@@ -702,6 +752,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "22d55e99ca12112a9c89b660a00cbb3db919980c",
   "voxel_sha1": "9b83152cc6b3da9d5c08095e13820e4ff4bbf3ba"
  },
  {
@@ -711,6 +762,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "3e43fc9e74f05529197e1eae97f9dbe5ac88c9a3",
   "voxel_sha1": "821c9885462444cf39840680b7a39e8ada308e4c"
  },
  {
@@ -720,6 +772,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "abbe12e79f7c3c8d1007505be25e0d62d7adb4b8",
   "voxel_sha1": "b0a98d5e566fa760aa421c950e5bd5ce36fb9071"
  },
  {
@@ -729,6 +782,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "818f807cfa733ee9e7c6dbb8cfd5410e6aba2288",
   "voxel_sha1": "f37a656ce3188e1f3f5c49be756af23360c199bf"
  },
  {
@@ -738,6 +792,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "0510f0c19d4e4d749848f4d1786b74770c159189",
   "voxel_sha1": "496c119eb97ef780e4fdfa86b1532d01ae59d176"
  },
  {
@@ -747,6 +802,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "264a8431288b13ad88dc44ce710c46dbfc3cae13",
   "voxel_sha1": "792bd9dd30aa186cc846269005460e1b23872356"
  },
  {
@@ -756,6 +812,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "4f87f4a3cb5fade295e15c8a18c2df58373bb170",
   "voxel_sha1": "a9b44915facb26641e90f94ca306ccf802f09335"
  },
  {
@@ -765,6 +822,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "6350b96908402808aba5634f37e414d74c1caaf6",
   "voxel_sha1": "8877745fcc8d87ac5c23f20e98116e0bb0646f2f"
  },
  {
@@ -774,6 +832,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "e59091bbf8f3105bb1fff0afe9d47379fe267a73",
   "voxel_sha1": "eaae157bc88940081d08e762b2961e471cedce19"
  },
  {
@@ -783,6 +842,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "e32e733746568f2b7196e8e337da3c20b6a846eb",
   "voxel_sha1": "e555d03557a02553c35dff1691c40b6bafd1f711"
  },
  {
@@ -792,6 +852,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "acf86c3103c734672d5caf811be68c360a176945",
   "voxel_sha1": "ae8a44bfda5b5a82acc3a839f4be5d2a7636867d"
  },
  {
@@ -810,6 +871,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "be45b20f7fb6b62b2c2da41862c16c243a687771",
   "voxel_sha1": "b52518341eee058023c353157f0d3797b94ff253"
  },
  {
@@ -846,6 +908,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "7d1baffc95697ec88bec4d764290a7c931f96f8e",
   "voxel_sha1": "24b2cb53e2add18ce3a641ad89a57e308c9e9895"
  },
  {
@@ -855,6 +918,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "538d656cc0227db6c3c1bcf19883563986abea94",
   "voxel_sha1": "fd3974d3a75ee6999430ea698b85534bcbaecfcf"
  },
  {
@@ -864,6 +928,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "962fe9427d146d21242083b132a78e6f5160ba3f",
   "voxel_sha1": "df4296e58ec3cea5d8a84066d3e294ae6da91c6b"
  },
  {
@@ -873,6 +938,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "b249fa9add63e0c327006df5e6ea89723362d32b",
   "voxel_sha1": "a7982674320e4ed08b58838fdf8fd197a8d07ff4"
  },
  {
@@ -882,6 +948,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "0288c1d5e0d800215408bb318babc6fbb27813f5",
   "voxel_sha1": "ad46c649fa7eddec2038a63cbcaef990642c36d9"
  },
  {
@@ -891,6 +958,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "0dfe10d4467c28942299195e1f77841561886d23",
   "voxel_sha1": "24d6f3a48f625f7f37662760d4e5c15c9d8f202a"
  },
  {
@@ -900,6 +968,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "bf770ef9ae7b2b304e3bad58a414272a7ab2f250",
   "voxel_sha1": "de8ce913b8305f6b27f14a556b6cff1709a399c9"
  },
  {
@@ -909,6 +978,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "16e9fcb75bd4b71c9292bb53e906ffdd8503feb2",
   "voxel_sha1": "85a46f85c5889b43fa43c61374b09a9bf2703fc2"
  },
  {
@@ -918,6 +988,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "c146f534833e033673a0a4d32bdf8e6e1e51adc2",
   "voxel_sha1": "ad6e57912ad577e75b3d42e23f79ef8c16f7cef6"
  },
  {
@@ -927,6 +998,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "ba6dff6004dfa2258dea84516461ff929d4f2f03",
   "voxel_sha1": "4a0f7ce5bedc2a233374af8aa8d0940797e4ac6a"
  },
  {
@@ -936,6 +1008,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "577133609061732e4ec61ad24a40d0d6cb28c6a0",
   "voxel_sha1": "3b3e63e422ed4eb8b5ea16adbfb19b6a92cab156"
  },
  {
@@ -945,6 +1018,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "f1110e89f051215a7c4a279ca34454d3b7ce02e8",
   "voxel_sha1": "713c5c922d3403e96a393911a42a3d1be1daab0d"
  },
  {
@@ -954,6 +1028,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "465a7d779c4ae1b15116100109303589a1c281b2",
   "voxel_sha1": "29e1ac23d1f7b0004eb880b6aee54384a855e433"
  },
  {
@@ -963,6 +1038,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "978baf88fe77391bcc66fe699863f355f07f897c",
   "voxel_sha1": "c009c38248385caacdc091051fc150530a58997b"
  },
  {
@@ -972,6 +1048,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "4db69573f42fb1e447b3116eefcb8ba3456918b9",
   "voxel_sha1": "8dd12630b9d0e6166d4e3b1d05fd885027522cfb"
  },
  {
@@ -981,6 +1058,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "6b81d6a76443266d0e670356d92f61d25f7949ea",
   "voxel_sha1": "83139c7ef0f14a84ea958468d973d38e30dd3d26"
  },
  {
@@ -990,6 +1068,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "cee1b42248219a100cb9e0130cf338dffb2271ec",
   "voxel_sha1": "c8af1f93a1d5c929a374425c985adc9c0fadcecb"
  },
  {
@@ -1017,6 +1096,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "8523488b4d22de554fae94db8e633b3a74463b20",
   "voxel_sha1": "fec688236264105a20abdf5b95103e8512c7842f"
  },
  {
@@ -1026,6 +1106,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "9bff25697a0abccdf48cd68618e001d8584bfaff",
   "voxel_sha1": "56159f09b5e1927b50da14a39855a744843afe26"
  },
  {
@@ -1035,6 +1116,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "d12c33a8c46e48993408461b47abc1c639f4cc21",
   "voxel_sha1": "986eb98626d803ca830bf492f832e5d4fa1a3965"
  },
  {
@@ -1044,6 +1126,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "9bfb39963cea18712e902e76d3e24931ad6e1047",
   "voxel_sha1": "2b7aa7e31aa8a881ae046e67dbded9c88d36e564"
  },
  {
@@ -1053,6 +1136,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "68d5ae5b8e0ccaf91a7d5597fd95c0a68039e110",
   "voxel_sha1": "f93cbff68ea1967ad0bea68fed116695c289810b"
  },
  {
@@ -1062,6 +1146,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "bd8c033406facf932e092c5e110fb7dea391bd83",
   "voxel_sha1": "b074833c63cda1076263e1001fead300a4955b42"
  },
  {
@@ -1071,6 +1156,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "9c9e35b6dab4fbc8a9d9e1b1269ce35914ad00de",
   "voxel_sha1": "0245084045759a1bb8ee0b1fcfe99c2d8a75e4b0"
  },
  {
@@ -1089,6 +1175,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "469e4737a8ef6746df0194f35177d4437455bcca",
   "voxel_sha1": "83198f196f9f7051d811967269eb4dd58a6807e8"
  },
  {
@@ -1098,6 +1185,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "2291a1f0c36da3f278b36ce810a4a09555d8be8b",
   "voxel_sha1": "e5fd324ebf247a07e0d726575555387979d699cb"
  },
  {
@@ -1107,6 +1195,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "de76c972250be8c78f1416138bbe5803977f4a91",
   "voxel_sha1": "583382c94acd8419a6bcd945120f66a7e207f6ac"
  },
  {
@@ -1116,6 +1205,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "0ad38fb3ce95c2783c4574f49306d609583dbcc2",
   "voxel_sha1": "60ffe54283bef12395d1fb28aaa5eedf9c131f55"
  },
  {
@@ -1125,6 +1215,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "c637a8a26151c2745b62c258753b233d0fa61b5c",
   "voxel_sha1": "7d9f35757b23ec33f8284ade18075c29cffe7e4c"
  },
  {
@@ -1134,6 +1225,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "2b33471350031f3a2303f1ea2370c4d9fccb59e9",
   "voxel_sha1": "281727e0db5fb9173571f66dfb0bc9458bb4f72e"
  },
  {
@@ -1152,6 +1244,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "79b559d8a84676d06bf7d32db63997f8d951fd1c",
   "voxel_sha1": "40c44aa1efb316270c5684d2f5a0ff014abd292c"
  },
  {
@@ -1161,6 +1254,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "c8ba1e530e57fdbe40db7a5db9b197f7738fa677",
   "voxel_sha1": "2b461347bedb18b960df7ea6a04442e9f20bb2bd"
  },
  {
@@ -1179,6 +1273,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "6769b787a2cd104a5fdf093c569c78630c78a53d",
   "voxel_sha1": "d335476ce2571389d8cf183ed75d36a199a69775"
  },
  {
@@ -1197,6 +1292,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "8cb9f933ec77b7516599b38cac11389284cdaa97",
   "voxel_sha1": "3999f5aaa4969da366011f15e79c4c44a3b0a7c7"
  },
  {
@@ -1206,6 +1302,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "9ce7f3d2a9d93a8a79fc79eee0be1ac5bae5da14",
   "voxel_sha1": "f1f70ce979e44a87cd1fb3376974a5080df54a34"
  },
  {
@@ -1215,6 +1312,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "d5fb8b8e6b5f61d093af88e5607c0ea3506c5d72",
   "voxel_sha1": "51cde9b02f2e8953382262c8de17be71dd3bf065"
  },
  {
@@ -1224,6 +1322,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "a15123a0d33f8b5aba0654b9fe16a1594478373c",
   "voxel_sha1": "244ced1a1e29b2b5936f3861be4ad494d996853d"
  },
  {
@@ -1233,6 +1332,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "453fb01341b0a362f1b71b5b9d8ed2da11e1b695",
   "voxel_sha1": "4705ecc55a9926934f55580e2c7c0314e8020259"
  },
  {
@@ -1242,6 +1342,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "97eeccb992619ad6644d2a2c7906fd41f268b0c3",
   "voxel_sha1": "e738eec24b6f70b1fec200f559e0421ca85cca7a"
  },
  {
@@ -1251,6 +1352,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "7d7d44585c0524f26ee483ad9fdf9fe6a08d7acc",
   "voxel_sha1": "bbbd034b78d608ef5cbcafaeea78841ebe4c3507"
  },
  {
@@ -1260,6 +1362,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "a9ae61ae5f39f0ce75608dd6ecc9d37ae7a1c92f",
   "voxel_sha1": "024ddcad4db19d3a108b6de1fcd956c74c852652"
  },
  {
@@ -1269,6 +1372,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "2d6b8d161c43b2d3b43457889b501015782567da",
   "voxel_sha1": "24a95bc5997307b6efdd5e4e6b1db0ba77a14941"
  },
  {
@@ -1278,6 +1382,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "4b34053ccb160e160151dd7b5e51975df836a81e",
   "voxel_sha1": "7206e9e20dfa31b211f6428c1e2550ae9f2343f5"
  },
  {
@@ -1287,6 +1392,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "df958491c8c75907d0bbc25491e072268437ce04",
   "voxel_sha1": "a17479d5817605182208965ae2d379e749469920"
  },
  {
@@ -1296,6 +1402,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "cf134a7b7e120f43371da4e55b4641aa5f9e3a0b",
   "voxel_sha1": "a1826c6f76d5088d7df9ece7d254a6ceebab1936"
  },
  {
@@ -1305,6 +1412,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "26b336ee2b5542c57482d51dcd9aad954ebd5132",
   "voxel_sha1": "ea1ba53256a00f6e9850f11b2a6563a3d2ac6c1d"
  },
  {
@@ -1314,6 +1422,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "655a1974e29b233c02e10d30986c1b450b34da13",
   "voxel_sha1": "0c7f4a58ba7357759fe814f1a024628889fbd249"
  },
  {
@@ -1323,6 +1432,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "298de9eebc72421fec990b39339a518e0eca5b76",
   "voxel_sha1": "34e63309099e16e8e4ad93c41ba577abb387a64e"
  },
  {
@@ -1350,6 +1460,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "7a92f2564ef628ce05573611bd78ac3c3979fee9",
   "voxel_sha1": "16f10ee32a027f692546c644f45071b1c2628015"
  },
  {
@@ -1359,6 +1470,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "0939dea38c467d40bea51131f8326c8a1776add9",
   "voxel_sha1": "5f08fbc446ee68a593ec25d21a41e826bcb1db89"
  },
  {
@@ -1368,6 +1480,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "1a3dec5dc7da853bd75a6f11a4fdd575c4f51a8e",
   "voxel_sha1": "9fb3d491c032b359041a28150109a57b75ad94d2"
  },
  {
@@ -1377,6 +1490,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "5095a31cf3e65706726b0a8692728886398817c0",
   "voxel_sha1": "907ae109ff834d381ea79aab33c8a073e9fecded"
  },
  {
@@ -1386,6 +1500,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "9637a030c3acd46c791f7090472fdff1f60fcfc9",
   "voxel_sha1": "209a6ed0c1d9ad47389f56ac7eb9405ed4c42023"
  },
  {
@@ -1395,6 +1510,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "cdb9d77f1323874a26435fca61d6c6f1213c473c",
   "voxel_sha1": "b6a253a6274707eb8ed41511a5b0b107e3234c85"
  },
  {
@@ -1404,6 +1520,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "0ee09c277243d536cc27d276df0ce529d7ab362b",
   "voxel_sha1": "a13ab0c14578b6898cc9896b36cbbd8e0d1ed845"
  },
  {
@@ -1413,6 +1530,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "8f97792a8d1ef19e0e23e52b3285c9a0895b6f6d",
   "voxel_sha1": "ddff4e373ab0ddce73b303cd10224accfbbbebf8"
  },
  {
@@ -1422,6 +1540,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "5a7e2cb645336d8d890381b4c6ba03d12c1f8fb9",
   "voxel_sha1": "42feec35945f97c395366d62ab5692e22730afe3"
  },
  {
@@ -1431,6 +1550,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "20b9fdcdd115bd0a290ebd5d7e617a226ad8af1f",
   "voxel_sha1": "8f5f5378f8733cdbbf74713a86e9353f9074b12b"
  },
  {
@@ -1440,6 +1560,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "296a010e97904c78520d84210d79e0a497301e94",
   "voxel_sha1": "c3a7c194273340530f3c27a31ba5a6307709c110"
  },
  {
@@ -1467,6 +1588,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "e168d0680363d384e246d25fbcda713e5f32e5f5",
   "voxel_sha1": "9afcf88dc40d4e625a371e70ec2bda3573888d64"
  },
  {
@@ -1476,6 +1598,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "bb6e848c92216f18df0c613d30b12286d1e004e5",
   "voxel_sha1": "2fbe82eb32ffb1437e10a8f81dfa48afbc0dc1dc"
  },
  {
@@ -1485,6 +1608,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "bfe64dc19657a2d0919304c8df1ee2f6acad604d",
   "voxel_sha1": "712fbf11c8c71fb7299e86c224f8461120a751c1"
  },
  {
@@ -1494,6 +1618,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "96501bb2b57d5a37a056e5f3c5cea3ffb26d67d8",
   "voxel_sha1": "d863bd5a82a998e6267c950621ec0665cbb08782"
  },
  {
@@ -1521,6 +1646,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "d772ffd25ae778fecbb3aa942910e02ae604bbd7",
   "voxel_sha1": "02bae2e2c034faf678a4908adf0cb99a15b0a504"
  },
  {
@@ -1530,6 +1656,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "1e1772c398be9c2df2234b0596a72d27161a1ccd",
   "voxel_sha1": "b63552af058b890667693c0138cd6a8693b810ee"
  },
  {
@@ -1539,6 +1666,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "6e8c4e13c5c6106b8407b2bbab4a43ad4813f783",
   "voxel_sha1": "0cc40ec7922c0a2afc9771d7a28a3634cb9dda53"
  },
  {
@@ -1557,6 +1685,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "0966658f85b7dc9750ada3247020824ece11f2ec",
   "voxel_sha1": "ae3cd222f1d04bf9d3617aaa050fceecff13f07f"
  },
  {
@@ -1611,6 +1740,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "92380a60b319da03e139e586c679683a44b9cdfe",
   "voxel_sha1": "916b93ce39451fe5a08a7f6000e39f68dd684f70"
  },
  {
@@ -1620,6 +1750,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "34a680298efe9492c6e17f6d8645f44226769738",
   "voxel_sha1": "90497b228e0770038ccac13e024a35bed9b92576"
  },
  {
@@ -1629,6 +1760,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "a7001a2c1df760b485754b311acb86c675f21277",
   "voxel_sha1": "7f8c656029079bb1cb6a1ad2aa9c6acabc65db2b"
  },
  {
@@ -1638,6 +1770,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "5cec46bdd46121c4e1d6c5993426b2971b318c7c",
   "voxel_sha1": "2ea6db391ffadf6d1e7a7309a8ec5060da2af173"
  },
  {
@@ -1647,6 +1780,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "4b718565ea5329411cc8c7259664424347d480a3",
   "voxel_sha1": "a2b91f6cdd834c63d643c6ef73091e7b490bd1bc"
  },
  {
@@ -1656,6 +1790,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "76c756b5e1958b6f0a8f9673f77f904bdb7546c7",
   "voxel_sha1": "919b8d199cf3c58c46b662e9c1d19df69b6758d4"
  },
  {
@@ -1665,6 +1800,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "b6ccd44220558c15cca53c1db89a7ccc4159bfb7",
   "voxel_sha1": "34c6b2a44649f2eb834e198c47108cc8d83467fe"
  },
  {
@@ -1674,6 +1810,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "442e41ad142bad00ab6fc18d794195ea8d24322c",
   "voxel_sha1": "3d70d1c79e3a637e976563be460de45f87921bc6"
  },
  {
@@ -1683,6 +1820,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "e97bf72f3953837d21f2634d6a61de12d9ff379d",
   "voxel_sha1": "a44d6f6cc07a71d15888cc206e8e22255e0c107f"
  },
  {
@@ -1692,6 +1830,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "fbf3159cbede6828dc88c42412523fd1d173bfe3",
   "voxel_sha1": "5e672293a06c3f14bec6910a67067df3499083a4"
  },
  {
@@ -1701,6 +1840,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "fa48df06eef941a522d0ad9ae35808c181976121",
   "voxel_sha1": "7b37ce822bb0d224a342c1e5218ca6ad48125232"
  },
  {
@@ -1710,6 +1850,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "1220591a21efe7b341a3fff087c8d756e0ecd339",
   "voxel_sha1": "fd0570099420c8ab9e7508ddd3afd469304bfd79"
  },
  {
@@ -1719,6 +1860,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "d9cddce9caba2179953fd6aeb32a116a9b706a10",
   "voxel_sha1": "04ff622dc81c355a305475d6f516615bca3d6f25"
  },
  {
@@ -1728,6 +1870,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "27760da11838c9dd87dd75b3d41bbd416ccf229e",
   "voxel_sha1": "7e90cd90b2efd9ab32c6a14de2298b81cc068aa0"
  },
  {
@@ -1737,6 +1880,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "87bd713973b7ad617d99f1a4c66914fc1ce03a3b",
   "voxel_sha1": "2f50e630e7def776a07a23e463f09a11b40a336e"
  },
  {
@@ -1746,6 +1890,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "533190ab1a1e95bcf9052c29c691fc0bebd74d64",
   "voxel_sha1": "27b8891a02810c421c28870787cf571fecc70266"
  },
  {
@@ -1764,6 +1909,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "1df8ecd592751c61a66c89c6cab5a09f32e3fd1c",
   "voxel_sha1": "92ce727b45178314a0ed126ab890537cbb6063cb"
  },
  {
@@ -1791,6 +1937,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "6b847488f86f404d783e5d0e7d8aa18fd343d103",
   "voxel_sha1": "b73778dd7244be4e2c3d0bced33c7894e42ed7bc"
  },
  {
@@ -1809,6 +1956,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "2edfd93cc7d6a8ca6ade956032b9669727a0ac5b",
   "voxel_sha1": "238b43802f4ba0168da02caaa8bf9b8311bf7e2d"
  },
  {
@@ -1863,6 +2011,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "e5f1293e7d066179001d8ba19e2d660d57f701ae",
   "voxel_sha1": "1bfedd0ed9f3c729a283f40e84aae9aa014a467f"
  },
  {
@@ -1872,6 +2021,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "9238df6953e7124e6e912bddfe5890133da7b908",
   "voxel_sha1": "220bff018566166fd05cacb2aa29544a874c4c07"
  },
  {
@@ -1881,6 +2031,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "2284ef627e5263c54046241df942aa265d678639",
   "voxel_sha1": "111ddd1b2188ede3e1fc6fa715ffd419bc99afa9"
  },
  {
@@ -1890,6 +2041,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "f0a22c5ef67568a3f9578fd353da51b888c92aa4",
   "voxel_sha1": "cc4ac2cf95313b51322b53a5d6ba903263d4cb5e"
  },
  {
@@ -1926,6 +2078,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "ffe7ba435d152dcee7630512e0e85607be60b2a6",
   "voxel_sha1": "1daaec535ded9dd848b36000b26b58ecd6cac359"
  },
  {
@@ -1944,6 +2097,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "2fd6e7ba208fb2982db5808a663832f75b1fbe86",
   "voxel_sha1": "ac408a568ade5702e3b9ef49fcc8725e75276e6d"
  },
  {
@@ -1953,6 +2107,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "3dc797ec53b40ac180799a353bfa1f5b34765f29",
   "voxel_sha1": "1c15d50c53d354c377a717140f0797d89bced4d1"
  },
  {
@@ -1971,6 +2126,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "50025b382f2d06335461b06eca3c273834ba2865",
   "voxel_sha1": "dc3d1982691088b3bf21559370b462e0351215f3"
  },
  {
@@ -1980,6 +2136,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "b6c831dccbc38b1fd1372784cafe67b7b5353111",
   "voxel_sha1": "d5763fbea4e95a55f150ae12304db511fd0b1ebf"
  },
  {
@@ -1989,6 +2146,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "ead955bba42dd0dc4de50104f403bbc552848ff7",
   "voxel_sha1": "4cea06fa7e1b40d0bae79851432ee999779dd020"
  },
  {
@@ -1998,6 +2156,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "edb2be31c909c4f2e3b34390b1c018ee423ea401",
   "voxel_sha1": "ca1c44ede6eba86af8df322a2b48ed2c7092d9d1"
  },
  {
@@ -2007,6 +2166,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "e12a4316fd3a78a69982bcc35a2b79540f84cdbe",
   "voxel_sha1": "2cd811d23827b64f04ae8bbebebf29e3bd69b5ef"
  },
  {
@@ -2016,6 +2176,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "c3643c3e38f077432b8ccc9999c5bd9732615593",
   "voxel_sha1": "bcdee496c3c00d1fd301a8919a086afac5992e72"
  },
  {
@@ -2025,6 +2186,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "c876aaef51470a111ae65ced3357bd3b7127278f",
   "voxel_sha1": "a9900f6245f2c12a79c11fe5ef8525239c3e5e86"
  },
  {
@@ -2034,6 +2196,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "22b1eba83f483ccf5e0d8a01d28782c8d2d3fe38",
   "voxel_sha1": "24784d911a50f54ec5fb27151b5528e3023ced32"
  },
  {
@@ -2043,6 +2206,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "c93863e088ac8d67ccff09fba3827a0392784882",
   "voxel_sha1": "94184c595b499bc6635b1e03fd7f922758fc1210"
  },
  {
@@ -2052,6 +2216,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "67d1ef4722326f69fd83a75e91c17c62ace1ac82",
   "voxel_sha1": "c7b6a9509a93fc4a656b880f3e092f0afe9e3fda"
  },
  {
@@ -2061,6 +2226,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "945a691c4388cd4b7a8e232dabccbe48d8917035",
   "voxel_sha1": "3f8e79fc11fc29db7d5bf8c3de29de66b1798a71"
  },
  {
@@ -2070,6 +2236,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "a3ec711b552c4ad2727f997ac29a112b65f50ff5",
   "voxel_sha1": "0c55b43d9e31a66fb4c1fb6a6e68badd553a458a"
  },
  {
@@ -2124,6 +2291,7 @@
   "kind": "item",
   "master": "smooth",
   "colourings": [],
+  "editable_sha1": "d81713ec6733129ade830434eba0dee56d8711cc",
   "voxel_sha1": "0fa9a7593715375219ab19b92b7c24abb88bde34"
  }
 ]
